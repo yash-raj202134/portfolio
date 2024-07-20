@@ -11,7 +11,7 @@
 <body>
   <header class="bg-dark text-white">
     <nav class="navbar navbar-expand-lg navbar-dark container">
-      <a class="navbar-brand" href="#">Yash Raj</a>
+      <a class="navbar-brand" href="index.html">Yash Raj</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -20,8 +20,14 @@
           <li class="nav-item">
             <a class="nav-link" href="#home">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              About
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#about">About Me</a>
+              <a class="dropdown-item" href="cv.html">CV</a>
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#projects">Projects</a>
@@ -30,7 +36,8 @@
             <a class="nav-link" href="#blog">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a></li>
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -86,36 +93,26 @@
     </div>
   </section>
 
-  <section id="blog" class="full-page bg-light d-flex flex-column justify-content-center">
+  <section id="blog" class="full-page bg-secondary text-white d-flex flex-column justify-content-center">
     <div class="container">
       <h2 class="text-center">Blog</h2>
       <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <img src="images/blog1.jpg" class="card-img-top" alt="Blog Post 1">
+        <div class="col-md-6">
+          <div class="card mb-4">
+            <img src="images/blog1.jpg" class="card-img-top" alt="Blog 1">
             <div class="card-body">
               <h5 class="card-title">Blog Post Title 1</h5>
-              <p class="card-text">A brief description or excerpt of the blog post. This is where you provide a summary of the content to attract readers.</p>
+              <p class="card-text">A brief overview of what this blog post is about. This should be a short teaser to attract readers.</p>
               <a href="#" class="btn btn-primary">Read More</a>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="images/blog2.jpg" class="card-img-top" alt="Blog Post 2">
+        <div class="col-md-6">
+          <div class="card mb-4">
+            <img src="images/blog2.jpg" class="card-img-top" alt="Blog 2">
             <div class="card-body">
               <h5 class="card-title">Blog Post Title 2</h5>
-              <p class="card-text">A brief description or excerpt of the blog post. This is where you provide a summary of the content to attract readers.</p>
-              <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="images/blog3.jpg" class="card-img-top" alt="Blog Post 3">
-            <div class="card-body">
-              <h5 class="card-title">Blog Post Title 3</h5>
-              <p class="card-text">A brief description or excerpt of the blog post. This is where you provide a summary of the content to attract readers.</p>
+              <p class="card-text">A brief overview of what this blog post is about. This should be a short teaser to attract readers.</p>
               <a href="#" class="btn btn-primary">Read More</a>
             </div>
           </div>
@@ -146,10 +143,9 @@
     <p>&copy; 2024 Yash Raj. All rights reserved.</p>
   </footer>
 
-  <!-- Bootstrap JS and dependencies -->
+  <!-- jQuery and Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="scripts/scripts.js"></script>
 </body>
 </html>
