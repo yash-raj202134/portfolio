@@ -4,46 +4,112 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yash Raj - Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+  <header class="bg-dark text-white">
+    <nav class="navbar navbar-expand-lg navbar-dark container">
+      <a class="navbar-brand" href="#">Yash Raj</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
 
-  <section id="home" class="full-page">
-    <h1>Welcome to My Portfolio</h1>
-    <p>Hi, I'm Yash Raj, a Computer Science Engineer specializing in machine learning and data science.</p>
+  <section id="home" class="full-page text-center bg-light d-flex flex-column justify-content-center align-items-center">
+    <div class="container">
+      <h1>Welcome to My Portfolio</h1>
+      <p class="lead">Hi, I'm Yash Raj, a Computer Science Engineer specializing in machine learning and data science.</p>
+      <img src="images/profile.jpg" alt="Yash Raj" class="img-fluid rounded-circle" width="200">
+    </div>
   </section>
 
-  <section id="about" class="full-page">
-    <h2>About Me</h2>
-    <p>Background, education, skills, and experience.</p>
+  <section id="about" class="full-page bg-secondary text-white d-flex flex-column justify-content-center">
+    <div class="container text-center">
+      <h2>About Me</h2>
+      <p>Background, education, skills, and experience.</p>
+    </div>
   </section>
 
-  <section id="projects" class="full-page">
-    <h2>Projects</h2>
-    <!-- Project details go here -->
+  <section id="projects" class="full-page bg-light d-flex flex-column justify-content-center">
+    <div class="container">
+      <h2 class="text-center">Projects</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/license-plate-recognition.png" class="card-img-top" alt="License Plate Recognition">
+            <div class="card-body">
+              <h5 class="card-title">License Plate Recognition</h5>
+              <p class="card-text">Detecting and recognizing vehicle license plates using annotated datasets of vehicle images and license plate images. Identifying license plates in images and performing character recognition on them.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/recommendafy.png" class="card-img-top" alt="RecommendaFy Project">
+            <div class="card-body">
+              <h5 class="card-title">RecommendaFy-Project</h5>
+              <p class="card-text">An e-commerce recommendation system using Python Flask and machine learning to provide personalized product recommendations to users.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/hr-talent-acquisition.png" class="card-img-top" alt="HR Talent Acquisition">
+            <div class="card-body">
+              <h5 class="card-title">HR Talent Acquisition</h5>
+              <p class="card-text">Leveraging Python libraries and algorithms to optimize the hiring process and revolutionize job placement strategies with machine learning insights.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="contact" class="full-page">
-    <h2>Contact</h2>
-    <form>
-      <!-- Contact form elements go here -->
-    </form>
+  <section id="contact" class="full-page bg-secondary text-white d-flex flex-column justify-content-center">
+    <div class="container text-center">
+      <h2>Contact</h2>
+      <form>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Your Name">
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="Your Email">
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-light">Send</button>
+      </form>
+    </div>
   </section>
 
-  <footer>
+  <footer class="bg-dark text-white text-center py-3">
     <p>&copy; 2024 Yash Raj. All rights reserved.</p>
   </footer>
 
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="scripts/scripts.js"></script>
 </body>
 </html>

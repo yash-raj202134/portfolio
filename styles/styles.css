@@ -6,33 +6,9 @@ body {
     box-sizing: border-box;
   }
   
-  /* Header and Navigation */
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center; /* Center the navigation menu */
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav ul li {
-    margin: 0 0.5rem; /* Reduce the margin to bring items closer */
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  /* Full Page Sections */
   .full-page {
     width: 100%;
+    min-height: 100vh;
     padding: 4rem 2rem;
     box-sizing: border-box;
   }
@@ -43,15 +19,17 @@ body {
   }
   
   #about {
-    background-color: #e4e4e4;
+    background-color: #5a5a5a;
+    color: #fff;
   }
   
   #projects {
-    background-color: #d4d4d4;
+    background-color: #f4f4f4;
   }
   
   #contact {
-    background-color: #c4c4c4;
+    background-color: #5a5a5a;
+    color: #fff;
   }
   
   /* Footer */
@@ -60,5 +38,11 @@ body {
     padding: 1rem 0;
     background-color: #333;
     color: #fff;
+  }
+  
+  /* Custom Styles */
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
   }
   
