@@ -16,13 +16,13 @@ body {
   nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Center the navigation menu */
     padding: 0;
     margin: 0;
   }
   
   nav ul li {
-    margin: 0 1rem;
+    margin: 0 0.5rem; /* Reduce the margin to bring items closer */
   }
   
   nav ul li a {
