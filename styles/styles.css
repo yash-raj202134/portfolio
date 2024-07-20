@@ -106,3 +106,20 @@ body {
 .blog-post h2 a:hover {
   color: #007bff;
 }
+
+/* Contact Form Styles */
+#form-status {
+  transition: opacity 0.3s ease;
+}
+
+#form-status.alert-success {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+#form-status.alert-danger {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}

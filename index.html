@@ -210,21 +210,22 @@
     </div>
   </section>
 
-  <section id="contact" class="full-page bg-secondary text-white d-flex flex-column justify-content-center">
+  <section id="contact" class="section full-page bg-secondary text-white d-flex flex-column justify-content-center">
     <div class="container text-center">
-      <h2>Contact</h2>
-      <form>
+      <h2 class="mb-4">Contact</h2>
+      <form id="contact-form" class="mx-auto" style="max-width: 500px;">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Your Name">
+          <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
         </div>
         <div class="form-group">
-          <input type="email" class="form-control" placeholder="Your Email">
+          <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
         </div>
         <div class="form-group">
-          <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+          <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
         </div>
-        <button type="submit" class="btn btn-light">Send</button>
+        <button type="submit" class="btn btn-primary">Send Message</button>
       </form>
+      <div id="form-status" class="mt-3" style="display: none;"></div>
     </div>
   </section>
 
@@ -234,6 +235,7 @@
 
   <!-- jQuery and Bootstrap JS -->
   <script src="scripts/project-filter.js"></script>
+  <script src="scripts/form-validation.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
