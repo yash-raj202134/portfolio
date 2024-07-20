@@ -1,8 +1,16 @@
+
 portfolio-website/
 ├── index.html
+├── cv.html
+├── blog-listing.html
 ├── styles/
 │   ├── styles.css
 ├── scripts/
 │   ├── scripts.js
+│   ├── form-validation.js
+│   ├── project-filter.js
 ├── images/
+├── blog/
+│   ├── post1.html
+│   ├── post2.html
 ├── README.md
