@@ -32,7 +32,10 @@ body {
     color: #fff;
   }
   
-  /* Footer */
+  #blog {
+    background-color: #f4f4f4;
+  }
+  
   footer {
     text-align: center;
     padding: 1rem 0;
@@ -44,5 +47,9 @@ body {
   .card-img-top {
     height: 200px;
     object-fit: cover;
+  }
+  
+  .card-body {
+    text-align: center;
   }
   
