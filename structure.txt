@@ -1,0 +1,8 @@
+portfolio-website/
+├── index.html
+├── styles/
+│   ├── styles.css
+├── scripts/
+│   ├── scripts.js
+├── images/
+├── README.md
