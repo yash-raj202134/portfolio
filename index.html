@@ -96,7 +96,7 @@
     </div>
   </section>
 
-  <section id="projects" class="full-page bg-light d-flex flex-column justify-content-center">
+  <!-- <section id="projects" class="full-page bg-light d-flex flex-column justify-content-center">
     <div class="container">
       <h2 class="text-center">Projects</h2>
       <div class="row">
@@ -129,19 +129,67 @@
         </div>
       </div>
     </div>
+  </section> -->
+  <section id="projects" class="section full-page bg-light d-flex flex-column justify-content-center">
+    <div class="container">
+      <h2 class="text-center mb-5">Projects</h2>
+      
+      <!-- Add filter buttons -->
+      <div class="text-center mb-4">
+        <button class="btn btn-primary filter-btn active" data-filter="all">All</button>
+        <button class="btn btn-primary filter-btn" data-filter="machine-learning">Machine Learning</button>
+        <button class="btn btn-primary filter-btn" data-filter="web-development">Web Development</button>
+        <button class="btn btn-primary filter-btn" data-filter="data-science">Data Science</button>
+      </div>
+  
+      <div class="row" id="project-grid">
+        <!-- License Plate Recognition -->
+        <div class="col-md-4 mb-4 project-item" data-category="machine-learning">
+          <div class="card">
+            <img src="images/license-plate-recognition.png" class="card-img-top" alt="License Plate Recognition">
+            <div class="card-body">
+              <h5 class="card-title">License Plate Recognition</h5>
+              <p class="card-text">Detecting and recognizing vehicle license plates using annotated datasets of vehicle images and license plate images.</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- RecommendaFy Project -->
+        <div class="col-md-4 mb-4 project-item" data-category="web-development">
+          <div class="card">
+            <img src="images/recommendafy.png" class="card-img-top" alt="RecommendaFy Project">
+            <div class="card-body">
+              <h5 class="card-title">RecommendaFy-Project</h5>
+              <p class="card-text">An e-commerce recommendation system using Python Flask and machine learning to provide personalized product recommendations to users.</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- HR Talent Acquisition -->
+        <div class="col-md-4 mb-4 project-item" data-category="data-science">
+          <div class="card">
+            <img src="images/hr-talent-acquisition.png" class="card-img-top" alt="HR Talent Acquisition">
+            <div class="card-body">
+              <h5 class="card-title">HR Talent Acquisition</h5>
+              <p class="card-text">Leveraging Python libraries and algorithms to optimize the hiring process and revolutionize job placement strategies with machine learning insights.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="blog" class="full-page bg-secondary text-white d-flex flex-column justify-content-center">
+  <section id="blog" class="section full-page bg-secondary text-white d-flex flex-column justify-content-center">
     <div class="container">
-      <h2 class="text-center">Blog</h2>
+      <h2 class="text-center mb-5">Blog</h2>
       <div class="row">
         <div class="col-md-6">
           <div class="card mb-4">
             <img src="images/blog1.jpg" class="card-img-top" alt="Blog 1">
             <div class="card-body">
-              <h5 class="card-title">Blog Post Title 1</h5>
-              <p class="card-text">A brief overview of what this blog post is about. This should be a short teaser to attract readers.</p>
-              <a href="#" class="btn btn-primary">Read More</a>
+              <h5 class="card-title">Machine Learning Trends in 2024</h5>
+              <p class="card-text">A brief overview of the latest trends in machine learning and how they're shaping the future of AI.</p>
+              <a href="blog/post1.html" class="btn btn-primary">Read More</a>
             </div>
           </div>
         </div>
@@ -149,12 +197,15 @@
           <div class="card mb-4">
             <img src="images/blog2.jpg" class="card-img-top" alt="Blog 2">
             <div class="card-body">
-              <h5 class="card-title">Blog Post Title 2</h5>
-              <p class="card-text">A brief overview of what this blog post is about. This should be a short teaser to attract readers.</p>
-              <a href="#" class="btn btn-primary">Read More</a>
+              <h5 class="card-title">The Impact of Data Science on Modern Business</h5>
+              <p class="card-text">Exploring how data science is revolutionizing decision-making processes in various industries.</p>
+              <a href="blog/post2.html" class="btn btn-primary">Read More</a>
             </div>
           </div>
         </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="blog-listing.html" class="btn btn-light">View All Posts</a>
       </div>
     </div>
   </section>
@@ -182,6 +233,7 @@
   </footer>
 
   <!-- jQuery and Bootstrap JS -->
+  <script src="scripts/project-filter.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

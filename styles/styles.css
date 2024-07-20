@@ -78,3 +78,31 @@ body {
 #skills i {
   color: #007bff;
 }
+
+  /* Project Filter Buttons */
+  .filter-btn {
+    margin: 0 5px 10px;
+  }
+  
+  .filter-btn.active {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+/* Blog Styles */
+.blog-post {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.blog-post h2 a {
+  color: #333;
+  text-decoration: none;
+}
+
+.blog-post h2 a:hover {
+  color: #007bff;
+}
