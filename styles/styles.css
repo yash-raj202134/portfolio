@@ -1,0 +1,64 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Header and Navigation */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    margin: 0 1rem;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Full Page Sections */
+  .full-page {
+    width: 100%;
+    padding: 4rem 2rem;
+    box-sizing: border-box;
+  }
+  
+  /* Section Styles */
+  #home {
+    background-color: #f4f4f4;
+  }
+  
+  #about {
+    background-color: #e4e4e4;
+  }
+  
+  #projects {
+    background-color: #d4d4d4;
+  }
+  
+  #contact {
+    background-color: #c4c4c4;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: #fff;
+  }
+  
