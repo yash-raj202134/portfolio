@@ -164,12 +164,31 @@ body {
   }
   
   footer {
-    text-align: center;
-    padding: 1rem 0;
-    background-color: #333;
+
     color: #fff;
+    margin:  auto;
+    text-align: center;
   }
-  
+  .footer-social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-social-links a:hover {
+    color: #007bff;
+}
+
+
+/* Specific hover colors for each platform (optional) */
+.footer-social-links a[title="GitHub"]:hover { color: #6e5494; }
+.footer-social-links a[title="LinkedIn"]:hover { color: #0077B5; }
+.footer-social-links a[title="Kaggle"]:hover { color: #20BEFF; }
+.footer-social-links a[title="LeetCode"]:hover { color: #FFA116; }
+
+
+
   /* Custom Styles */
   .card-img-top {
     height: 200px;
@@ -367,52 +386,42 @@ body {
 
 
 
-
-
-.social-links a {
-  color: #fff;
-  transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-  color: #007bff; /* Or any color you prefer */
-}
-
-/* You can add specific colors for each platform if you want */
-.social-links a[title="Facebook Profile"]:hover {
-  color: #3b5998;
-}
-
-.social-links a[title="Instagram Profile"]:hover {
-  color: #e1306c;
-}
-
-.social-links a[title="Twitter Profile"]:hover {
-  color: #1da1f2;
-}
-
-.social-links-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px; /* Adjust as needed */
-}
-
 .social-links {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .social-links a {
-  margin: 0 10px;
-  color: #fff; /* Or any color you prefer */
-  transition: color 0.3s ease;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1.2rem;
+  margin-right: 15px;
+  transition: all 0.3s ease;
 }
 
 .social-links a:hover {
-  color: #007bff; /* Or any color you prefer for hover state */
+  background-color: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Specific colors for each platform (optional) */
+.social-links a[title="GitHub"] { background-color: #333; }
+.social-links a[title="LinkedIn"] { background-color: #0077B5; }
+.social-links a[title="Kaggle"] { background-color: #20BEFF; }
+.social-links a[title="LeetCode"] { background-color: #FFA116; }
+
+.social-links a[title="GitHub"]:hover { background-color: #24292e; }
+.social-links a[title="LinkedIn"]:hover { background-color: #005fa3; }
+.social-links a[title="Kaggle"]:hover { background-color: #1ca8cd; }
+.social-links a[title="LeetCode"]:hover { background-color: #d68910; }
 
 #goToTopBtn {
   display: none;
