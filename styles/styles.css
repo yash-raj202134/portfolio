@@ -225,6 +225,75 @@ body {
   color: #007bff;
 }
 
+
+.skills-background {
+  background-image: url('../images/skills-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.skills-overlay {
+  background-color: rgba(255, 255, 255, 0.9); /* white overlay */
+  padding: 60px 0;
+  width: 100%;
+}
+
+#skills h2 {
+  color: #007bff;
+  margin-bottom: 40px;
+}
+
+#skills h3 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+#skills h3 i {
+  margin-right: 10px;
+}
+
+.skill-category {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category h4 {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.skill-category p {
+  color: #666;
+  margin-bottom: 0;
+}
+
+#skills ul {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#skills ul li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+#skills ul li i {
+  color: #28a745;
+  margin-right: 10px;
+}
+
+
+
+
+
   /* Project Filter Buttons */
   .filter-btn {
     margin: 0 5px 10px;
