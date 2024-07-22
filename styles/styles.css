@@ -3,25 +3,28 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    padding-top: 56px; /* Adjust this value based on your navbar height */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  padding-top: 56px;
+  /* Adjust this value based on your navbar height */
+}
+
+.full-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 76px;
+    /* Adjust for larger navbar on bigger screens if necessary */
   }
-  
-  .full-page {
-    width: 100%;
-    min-height: 100vh;
-    padding: 4rem 2rem;
-    box-sizing: border-box;
-  }
-  
-  @media (min-width: 992px) {
-    body {
-        padding-top: 76px; /* Adjust for larger navbar on bigger screens if necessary */
-    }
 }
 
 .navbar {
@@ -29,58 +32,62 @@ body {
   top: 0;
 }
 
-  /* Section Styles */
-  #home {
-    background-color: #f4f4f4;
-  }
-  
+/* Section Styles */
+#home {
+  background-color: #f4f4f4;
+}
 
-  #home {
-    background-image: url('../images/home-background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
+
+#home {
+  background-image: url('../images/home-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
 }
 
 #home::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Adjust opacity as needed */
+  z-index: 1;
 }
 
 #home .container {
-    position: relative;
-    z-index: 2;
-    color: #ffffff; /* Ensure text is visible on the background */
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  /* Ensure text is visible on the background */
 }
 
-#home h1, #home p {
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Optional: adds depth to text */
+#home h1,
+#home p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Optional: adds depth to text */
 }
 
-  /* #about {
+/* #about {
     background-color: #5a5a5a;
     color: #fff;
   } */
 
-  #about {
-    padding: 80px 0;
+#about {
+  padding: 80px 0;
 }
 
 #about h3 {
-    margin-bottom: 20px;
-    color: #007bff;
+  margin-bottom: 20px;
+  color: #007bff;
 }
 
 #about h3 i {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .personal-intro {
@@ -105,66 +112,66 @@ body {
 
 
 .timeline {
-    position: relative;
-    padding-left: 30px;
-    list-style: none;
+  position: relative;
+  padding-left: 30px;
+  list-style: none;
 }
 
 .timeline::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 2px;
-    background: #007bff;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: #007bff;
 }
 
 .timeline li {
-    position: relative;
-    margin-bottom: 30px;
+  position: relative;
+  margin-bottom: 30px;
 }
 
 .timeline li::before {
-    content: '';
-    position: absolute;
-    left: -36px;
-    top: 0;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #007bff;
+  content: '';
+  position: absolute;
+  left: -36px;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #007bff;
 }
 
 .skill-item {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .skill-item h4 {
-    font-size: 1.1em;
-    color: #333;
-    margin-bottom: 5px;
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 5px;
 }
 
 .skill-item p {
-    color: #666;
+  color: #666;
 }
-  
 
 
 
 
-  #projects {
-    background-color: teal;
-  }
-  
-  #projects {
-    background-image: url('../images/projects-background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    position: relative;
-    padding: 80px 0;
+
+#projects {
+  background-color: teal;
+}
+
+#projects {
+  background-image: url('../images/projects-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  padding: 80px 0;
 }
 
 /* Add an overlay to ensure text readability */
@@ -175,7 +182,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.8); /* Adjust opacity as needed */
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Adjust opacity as needed */
   z-index: 1;
 }
 
@@ -185,57 +193,71 @@ body {
 }
 
 /* Adjust text color for better contrast if needed */
-#projects h2, #projects p {
-  color: #333; /* Adjust color as needed */
+#projects h2,
+#projects p {
+  color: #333;
+  /* Adjust color as needed */
 }
 
 
-  #contact {
-    background-color: #5a5a5a;
-    color: #fff;
-  }
-  
-  #blog {
-    background-color: #f4f4f4;
-  }
-  
-  footer {
+#contact {
+  background-color: #5a5a5a;
+  color: #fff;
+}
 
-    color: #fff;
-    margin:  auto;
-    text-align: center;
-  }
-  .footer-social-links a {
-    color: #fff;
-    font-size: 1.5rem;
-    margin-left: 15px;
-    transition: color 0.3s ease;
+#blog {
+  background-color: #f4f4f4;
+}
+
+footer {
+
+  color: #fff;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-social-links a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-left: 15px;
+  transition: color 0.3s ease;
 }
 
 .footer-social-links a:hover {
-    color: #007bff;
+  color: #007bff;
 }
 
 
 /* Specific hover colors for each platform (optional) */
-.footer-social-links a[title="GitHub"]:hover { color: #6e5494; }
-.footer-social-links a[title="LinkedIn"]:hover { color: #0077B5; }
-.footer-social-links a[title="Kaggle"]:hover { color: #20BEFF; }
-.footer-social-links a[title="LeetCode"]:hover { color: #FFA116; }
+.footer-social-links a[title="GitHub"]:hover {
+  color: #6e5494;
+}
+
+.footer-social-links a[title="LinkedIn"]:hover {
+  color: #0077B5;
+}
+
+.footer-social-links a[title="Kaggle"]:hover {
+  color: #20BEFF;
+}
+
+.footer-social-links a[title="LeetCode"]:hover {
+  color: #FFA116;
+}
 
 
 
-  /* Custom Styles */
-  .card-img-top {
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .card-body {
-    text-align: center;
-  }
+/* Custom Styles */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
 
-  /* Skills Section */
+.card-body {
+  text-align: center;
+}
+
+/* Skills Section */
 #skills .skill-item {
   background-color: #fff;
   border-radius: 8px;
@@ -271,7 +293,8 @@ body {
 }
 
 .skills-overlay {
-  background-color: rgba(255, 255, 255, 0.9); /* white overlay */
+  background-color: rgba(255, 255, 255, 0.9);
+  /* white overlay */
   padding: 60px 0;
   width: 100%;
 }
@@ -330,16 +353,16 @@ body {
 
 
 
-  /* Project Filter Buttons */
-  .filter-btn {
-    margin: 0 5px 10px;
-  }
-  
-  .filter-btn.active {
-    background-color: #0056b3;
-    border-color: #0056b3;
-  }
-  
+/* Project Filter Buttons */
+.filter-btn {
+  margin: 0 5px 10px;
+}
+
+.filter-btn.active {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
 /* Blog Styles */
 .blog-post {
   background-color: #fff;
@@ -360,21 +383,27 @@ body {
 
 /* Blog Section Styles */
 #blog {
-  background-color: #f4f4f4; /* Light gray background */
-  color: #333; /* Dark text color */
+  background-color: #f4f4f4;
+  /* Light gray background */
+  color: #333;
+  /* Dark text color */
 }
 
 #blog .card {
-  background-color: #ffffff; /* White background for cards */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  background-color: #ffffff;
+  /* White background for cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
 }
 
 #blog .card-body {
-  color: #333; /* Dark text color for card content */
+  color: #333;
+  /* Dark text color for card content */
 }
 
 #blog .card-title {
-  color: #007bff; /* Blue color for titles, you can adjust this */
+  color: #007bff;
+  /* Blue color for titles, you can adjust this */
 }
 
 #blog .btn-primary {
@@ -418,7 +447,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.8); /* Light overlay for contrast */
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Light overlay for contrast */
   z-index: 1;
 }
 
@@ -493,7 +523,8 @@ body {
 #contact {
   background-color: #f8f9fa;
   padding: 80px 0;
-  color: #000; /* Changed text color to black */
+  color: #000;
+  /* Changed text color to black */
 }
 
 #contact h3 {
@@ -523,16 +554,19 @@ body {
 
 #contact form label {
   font-weight: bold;
-  color: #000; /* Ensure labels are black */
+  color: #000;
+  /* Ensure labels are black */
 }
 
 #contact form .form-control {
   margin-bottom: 20px;
-  color: #000; /* Ensure input text is black */
+  color: #000;
+  /* Ensure input text is black */
 }
 
 #contact form .form-control::placeholder {
-  color: #6c757d; /* A lighter color for placeholder text */
+  color: #6c757d;
+  /* A lighter color for placeholder text */
 }
 
 #contact form button {
@@ -595,7 +629,8 @@ body {
 }
 
 #testimonials blockquote footer::before {
-  content: "— ";  /* Add an em dash before the author name */
+  content: "— ";
+  /* Add an em dash before the author name */
 }
 
 #testimonials .carousel-control-prev,
@@ -611,7 +646,8 @@ body {
   display: block;
   width: 50px;
   height: 2px;
-  background-color: red;  /* Or any color that fits your design */
+  background-color: red;
+  /* Or any color that fits your design */
   margin: 15px auto;
 }
 
@@ -650,15 +686,37 @@ body {
 }
 
 /* Specific colors for each platform (optional) */
-.social-links a[title="GitHub"] { background-color: #333; }
-.social-links a[title="LinkedIn"] { background-color: #0077B5; }
-.social-links a[title="Kaggle"] { background-color: #20BEFF; }
-.social-links a[title="LeetCode"] { background-color: #FFA116; }
+.social-links a[title="GitHub"] {
+  background-color: #333;
+}
 
-.social-links a[title="GitHub"]:hover { background-color: #24292e; }
-.social-links a[title="LinkedIn"]:hover { background-color: #005fa3; }
-.social-links a[title="Kaggle"]:hover { background-color: #1ca8cd; }
-.social-links a[title="LeetCode"]:hover { background-color: #d68910; }
+.social-links a[title="LinkedIn"] {
+  background-color: #0077B5;
+}
+
+.social-links a[title="Kaggle"] {
+  background-color: #20BEFF;
+}
+
+.social-links a[title="LeetCode"] {
+  background-color: #FFA116;
+}
+
+.social-links a[title="GitHub"]:hover {
+  background-color: #24292e;
+}
+
+.social-links a[title="LinkedIn"]:hover {
+  background-color: #005fa3;
+}
+
+.social-links a[title="Kaggle"]:hover {
+  background-color: #1ca8cd;
+}
+
+.social-links a[title="LeetCode"]:hover {
+  background-color: #d68910;
+}
 
 #goToTopBtn {
   display: none;
