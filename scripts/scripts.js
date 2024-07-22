@@ -84,6 +84,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('contact-form');
+  const animatedElements = document.querySelectorAll('.animate-text, .animate-image');
+
+  animatedElements.forEach(el => {
+    el.style.opacity = '0';
+  });
+
+  setTimeout(() => {
+    animatedElements.forEach(el => {
+      el.style.opacity = '1';
+    });
+  }, 100);
+
+
   form.addEventListener('submit', function(e) {
       e.preventDefault();
       const formData = new FormData(form);
@@ -103,3 +116,17 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   });
 });
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   const animatedElements = document.querySelectorAll('.animate-text, .animate-image');
+//   animatedElements.forEach(el => {
+//     el.style.opacity = '0';
+//   });
+  
+//   setTimeout(() => {
+//     animatedElements.forEach(el => {
+//       el.style.opacity = '1';
+//     });
+//   }, 100);
+// });
