@@ -68,3 +68,26 @@ goToTopBtn.onclick = function() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 };
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contact-form');
+  form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      
+      fetch('your-server-endpoint', {
+          method: 'POST',
+          body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+          alert('Message sent successfully!');
+          form.reset();
+      })
+      .catch(error => {
+          console.error('Error:', error);
+          alert('An error occurred. Please try again.');
+      });
+  });
+});

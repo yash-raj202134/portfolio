@@ -486,23 +486,55 @@ body {
 
 
 
-
-/* Contact Form Styles */
-#form-status {
-  transition: opacity 0.1s ease;
+#contact {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+  color: #000; /* Changed text color to black */
 }
 
-#form-status.alert-success {
-  background-color: grey;
-  border-color: #c3e6cb;
-  color: #155724;
+#contact h3 {
+  color: #007bff;
+  margin-bottom: 20px;
 }
 
-#form-status.alert-danger {
-  background-color: #f8d7da;
-  border-color: #f5c6cb;
-  color: #721c24;
+#contact ul {
+  margin-bottom: 30px;
 }
+
+#contact ul li {
+  margin-bottom: 10px;
+}
+
+#contact ul li i {
+  color: #007bff;
+  margin-right: 10px;
+}
+
+#contact form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contact form label {
+  font-weight: bold;
+  color: #000; /* Ensure labels are black */
+}
+
+#contact form .form-control {
+  margin-bottom: 20px;
+  color: #000; /* Ensure input text is black */
+}
+
+#contact form .form-control::placeholder {
+  color: #6c757d; /* A lighter color for placeholder text */
+}
+
+#contact form button {
+  width: 100%;
+}
+
 
 /* Testimonials Section */
 #testimonials .testimonial-item {
