@@ -212,7 +212,7 @@ html {
   }
   
   #projects {
-    background-image: url('../images/projects-background.jpg');
+    background-image: url('../images/home3-background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -331,7 +331,7 @@ html {
   
   
   .skills-background {
-    background-image: url('../images/skills-background.jpg');
+    background-image: url('../images/home2-background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -477,7 +477,7 @@ html {
   
   
   #blog {
-    background-image: url('../images/blog-background.jpg');
+    background-image: url('../images/background.2jpeg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -567,7 +567,7 @@ html {
   
   
   #contact {
-    background-color: #f8f9fa;
+    background-color: grey;
     padding: 80px 0;
     color: #000;
     /* Changed text color to black */
