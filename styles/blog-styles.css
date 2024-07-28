@@ -1,0 +1,59 @@
+/* styles/blog-styles.css */
+
+.blog-post {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.blog-post h2 {
+    color: #333;
+}
+
+.blog-post h2 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.blog-post h2 a:hover {
+    color: #007bff;
+}
+
+.social-share button {
+    margin-left: 5px;
+}
+
+.social-share button i {
+    margin-right: 0;
+}
+
+@media (max-width: 576px) {
+    .social-share {
+        margin-top: 10px;
+    }
+}
+
+
+/* existing blog-styles.css */
+
+.blog-post .social-share {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.blog-post .social-share h5 {
+    margin-bottom: 15px;
+}
+
+.blog-post .social-share button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 576px) {
+    .blog-post .social-share button {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
