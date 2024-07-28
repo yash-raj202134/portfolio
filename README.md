@@ -28,14 +28,14 @@ portfolio-website/
 ├── projects.html
 ├── styles/
 │   ├── styles.css
-|   ├── test_styles.css
+│    ├── test_styles.css
 ├── scripts/
 │   ├── scripts.js
 │   ├── form-validation.js
 │   ├── project-filter.js
 ├── images/
 ├── files/
-|   ├── resume.pdf
+│    ├── resume.pdf
 ├── blog/
 │   ├── post1.html
 │   ├── post2.html
