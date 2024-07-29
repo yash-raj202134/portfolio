@@ -207,13 +207,10 @@ html {
   
   
   
+
   
   #projects {
-    background-color: teal;
-  }
-  
-  #projects {
-    background-image: url('../images/home3-background.jpg');
+    background-color: whitesmoke;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -829,3 +826,13 @@ html {
   background-color: #0056b3;
 }
 
+.light-text {
+  color: rgba(39, 36, 36, 0.721)
+}
+
+
+.bold-line {
+  border-top: 4px solid  #007bff; /* Thick and bold line */
+  width: 50px; /* Short line */
+  margin: 10px auto 0; /* Center the line and add some spacing */
+}
