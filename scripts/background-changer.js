@@ -7,18 +7,22 @@ const backgrounds = [
 ];
 
 let currentIndex = 0;
+const home = document.getElementById('home');
 
 function changeBackground() {
-    const home = document.getElementById('home');
     currentIndex = (currentIndex + 1) % backgrounds.length;
-    home.style.backgroundImage = `url('${backgrounds[currentIndex]}')`;
+    const nextImage = new Image();
+    nextImage.onload = function() {
+        home.style.backgroundImage = `url('${backgrounds[currentIndex]}')`;
+    };
+    nextImage.src = backgrounds[currentIndex];
 }
-
-// Change background every 30 seconds
-setInterval(changeBackground, 30000);
 
 // Preload images
 backgrounds.forEach(src => {
     const img = new Image();
     img.src = src;
 });
+
+// Change background every 10 seconds
+setInterval(changeBackground, 10000);
