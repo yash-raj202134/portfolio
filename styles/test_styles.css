@@ -785,3 +785,43 @@ html {
   #goToTopBtn:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
+
+  /* Papers Section Styles */
+
+#papers {
+  padding: 60px 0;
+  background-image: url('../Images/paperbg.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  color: black; 
+}
+
+#papers .card {
+  border: 1px solid white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#papers .card-body {
+  padding: 20px;
+}
+
+#papers .card-title {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+#papers .card-text {
+  margin-bottom: 20px;
+}
+
+#papers .btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+#papers .btn:hover {
+  background-color: #0056b3;
+}
