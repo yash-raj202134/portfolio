@@ -790,17 +790,20 @@ html {
 
 #papers {
   padding: 60px 0;
+  position: 60px;
   background-image: url('../Images/paperbg.jpg');
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
   color: black; 
+  backdrop-filter: blur(30px); /* Apply blur effect */
 }
 
 #papers .card {
   border: 1px solid white;
   border-radius: 5px;
   overflow: hidden;
+  background:whitesmoke; /* Add a semi-transparent background for cards to ensure text readability */
 }
 
 #papers .card-body {
@@ -825,3 +828,4 @@ html {
 #papers .btn:hover {
   background-color: #0056b3;
 }
+
