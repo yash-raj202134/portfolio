@@ -45,6 +45,7 @@ html {
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
+    transition: background-image 1s ease-in-out;
   }
   
   #home::before {
@@ -477,7 +478,7 @@ html {
   
   
   #blog {
-    background-image: url('../images/background.2jpeg.jpg');
+    background-image: url('../images/home-background5.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
