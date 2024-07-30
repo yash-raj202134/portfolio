@@ -836,3 +836,15 @@ html {
   width: 50px; /* Short line */
   margin: 10px auto 0; /* Center the line and add some spacing */
 }
+
+
+.progress {
+  height: 20px;
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+}
