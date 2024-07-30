@@ -848,3 +848,18 @@ html {
   color: #fff;
   text-align: center;
 }
+
+.skill-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.skill-label {
+  font-weight: bold;
+}
+
+.skill-percentage {
+  font-weight: bold;
+}
