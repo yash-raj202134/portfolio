@@ -1,806 +1,840 @@
 /* Base styles */
 
 html {
-    scroll-behavior: smooth;
-  }
-  
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  padding-top: 56px;
+  /* Adjust this value based on your navbar height */
+}
+
+.full-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 992px) {
   body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    padding-top: 56px;
-    /* Adjust this value based on your navbar height */
+    padding-top: 76px;
+    /* Adjust for larger navbar on bigger screens if necessary */
   }
-  
-  .full-page {
-    width: 100%;
-    min-height: 100vh;
-    padding: 4rem 2rem;
-    box-sizing: border-box;
-  }
-  
-  @media (min-width: 992px) {
-    body {
-      padding-top: 76px;
-      /* Adjust for larger navbar on bigger screens if necessary */
-    }
-  }
-  
-  .navbar {
-    transition: top 0.3s;
-    top: 0;
-  }
-  
-  /* Section Styles */
-  #home {
-    background-color: #f4f4f4;
-  }
-  
-  
-  #home {
-    background-image: url('../images/home4-background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
-    transition: background-image 1s ease-in-out;
-  }
-  
-  #home::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Adjust opacity as needed */
-    z-index: 1;
-  }
-  
-  #home .container {
-    position: relative;
-    z-index: 2;
-    color: #ffffff;
-    /* Ensure text is visible on the background */
-  }
-  
-  #home h1,
-  #home p {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    /* Optional: adds depth to text */
-  }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes fadeInScale {
-    from {
-      opacity: 0;
-      transform: scale(0.9);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
-  #home .animate-text {
-    display: inline-block;
+}
+
+.navbar {
+  transition: top 0.3s;
+  top: 0;
+}
+
+/* Section Styles */
+#home {
+  background-color: #f4f4f4;
+}
+
+
+#home {
+  background-image: url('../images/home4-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  transition: background-image 1s ease-in-out;
+}
+
+#home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Adjust opacity as needed */
+  z-index: 1;
+}
+
+#home .container {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  /* Ensure text is visible on the background */
+}
+
+#home h1,
+#home p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Optional: adds depth to text */
+}
+
+@keyframes fadeInUp {
+  from {
     opacity: 0;
-    animation: fadeInUp 0.8s ease forwards;
+    transform: translateY(20px);
   }
-  
-  #home .highlight {
-    color : yellow;
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  #home .animate-image {
+}
+
+@keyframes fadeInScale {
+  from {
     opacity: 0;
-    animation: fadeInScale 1s ease 0.5s forwards;
+    transform: scale(0.9);
   }
-  
-  #home h1 .animate-text:nth-child(1) { animation-delay: 0.2s; }
-  #home h1 .animate-text:nth-child(2) { animation-delay: 0.4s; }
-  #home p .animate-text:nth-child(1) { animation-delay: 0.6s; }
-  #home p .animate-text:nth-child(2) { animation-delay: 0.8s; }
-  #home p .animate-text:nth-child(3) { animation-delay: 1s; }
-  #home p .animate-text:nth-child(4) { animation-delay: 1.2s; }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#home .animate-text {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+#home .highlight {
+  color: yellow;
+}
+
+#home .animate-image {
+  opacity: 0;
+  animation: fadeInScale 1s ease 0.5s forwards;
+}
+
+#home h1 .animate-text:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+#home h1 .animate-text:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+#home p .animate-text:nth-child(1) {
+  animation-delay: 0.6s;
+}
+
+#home p .animate-text:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+#home p .animate-text:nth-child(3) {
+  animation-delay: 1s;
+}
+
+#home p .animate-text:nth-child(4) {
+  animation-delay: 1.2s;
+}
 
 
 
-  /* #about {
+/* #about {
       background-color: #5a5a5a;
       color: #fff;
     } */
-  
-  #about {
-    padding: 80px 0;
-  }
-  
-  #about h3 {
-    margin-bottom: 20px;
-    color: #007bff;
-  }
-  
-  #about h3 i {
-    margin-right: 10px;
-  }
-  
-  .personal-intro {
-    background-color: #f8f9fa;
-    border-left: 4px solid #007bff;
-    padding: 20px;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .personal-intro p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #333;
-    margin-bottom: 15px;
-  }
-  
-  .personal-intro p:last-child {
-    margin-bottom: 0;
-  }
-  
-  
-  
-  .timeline {
-    position: relative;
-    padding-left: 30px;
-    list-style: none;
-  }
-  
-  .timeline::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 2px;
-    background: #007bff;
-  }
-  
-  .timeline li {
-    position: relative;
-    margin-bottom: 30px;
-  }
-  
-  .timeline li::before {
-    content: '';
-    position: absolute;
-    left: -36px;
-    top: 0;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #007bff;
-  }
-  
-  .skill-item {
-    margin-bottom: 20px;
-  }
-  
-  .skill-item h4 {
-    font-size: 1.1em;
-    color: #333;
-    margin-bottom: 5px;
-  }
-  
-  .skill-item p {
-    color: #666;
-  }
-  
-  
-  
-  
 
-  
-  #projects {
-    background-color: whitesmoke;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    position: relative;
-    padding: 80px 0;
-  }
-  
-  /* Add an overlay to ensure text readability */
-  #projects::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.8);
-    /* Adjust opacity as needed */
-    z-index: 1;
-  }
-  
-  #projects .container {
-    position: relative;
-    z-index: 2;
-  }
-  
-  /* Adjust text color for better contrast if needed */
-  #projects h2,
-  #projects p {
-    color: #333;
-    /* Adjust color as needed */
-  }
-  
-  
-  #contact {
-    background-color: #5a5a5a;
-    color: #fff;
-  }
-  
-  #blog {
-    background-color: #f4f4f4;
-  }
-  
-  footer {
-  
-    color: #fff;
-    margin: auto;
-    text-align: center;
-  }
-  
-  .footer-social-links a {
-    color: #fff;
-    font-size: 1.5rem;
-    margin-left: 15px;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-social-links a:hover {
-    color: #007bff;
-  }
-  
-  
-  /* Specific hover colors for each platform (optional) */
-  .footer-social-links a[title="GitHub"]:hover {
-    color: #6e5494;
-  }
-  
-  .footer-social-links a[title="LinkedIn"]:hover {
-    color: #0077B5;
-  }
-  
-  .footer-social-links a[title="Kaggle"]:hover {
-    color: #20BEFF;
-  }
-  
-  .footer-social-links a[title="LeetCode"]:hover {
-    color: #FFA116;
-  }
-  
-  
-  
-  /* Custom Styles */
-  .card-img-top {
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .card-body {
-    text-align: center;
-  }
-  
-  /* Skills Section */
-  #skills .skill-item {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  #skills .skill-item:hover {
-    transform: translateY(-5px);
-  }
-  
-  #skills .progress {
-    height: 10px;
-    margin-top: 10px;
-  }
-  
-  #skills .progress-bar {
-    background-color: #007bff;
-  }
-  
-  #skills i {
-    color: #007bff;
-  }
-  
-  
-  .skills-background {
-    background-image: url('../images/home2-background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    position: relative;
-  }
-  
-  .skills-overlay {
-    background-color: rgba(255, 255, 255, 0.9);
-    /* white overlay */
-    padding: 60px 0;
-    width: 100%;
-  }
-  
-  #skills h2 {
-    color: #007bff;
-    margin-bottom: 40px;
-  }
-  
-  #skills h3 {
-    color: #007bff;
-    margin-bottom: 20px;
-  }
-  
-  #skills h3 i {
-    margin-right: 10px;
-  }
-  
-  .skill-category {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .skill-category h4 {
-    font-size: 1.1em;
-    color: #333;
-    margin-bottom: 5px;
-  }
-  
-  .skill-category p {
-    color: #666;
-    margin-bottom: 0;
-  }
-  
-  #skills ul {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  #skills ul li {
-    margin-bottom: 10px;
-    font-size: 1.1em;
-  }
-  
-  #skills ul li i {
-    color: #28a745;
-    margin-right: 10px;
-  }
-  
-  
-  
-  
-  
-  /* Project Filter Buttons */
-  .filter-btn {
-    margin: 0 5px 10px;
-  }
-  
-  .filter-btn.active {
-    background-color: #0056b3;
-    border-color: #0056b3;
-  }
-  
-  /* Blog Styles */
-  .blog-post {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-  }
-  
-  .blog-post h2 a {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .blog-post h2 a:hover {
-    color: #007bff;
-  }
-  
-  /* Blog Section Styles */
-  #blog {
-    background-color: #f4f4f4;
-    /* Light gray background */
-    color: #333;
-    /* Dark text color */
-  }
-  
-  #blog .card {
-    background-color: #ffffff;
-    /* White background for cards */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
-  }
-  
-  #blog .card-body {
-    color: #333;
-    /* Dark text color for card content */
-  }
-  
-  #blog .card-title {
-    color: #007bff;
-    /* Blue color for titles, you can adjust this */
-  }
-  
-  #blog .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-    color: #ffffff;
-  }
-  
-  #blog .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
-  }
-  
-  #blog .btn-light {
-    background-color: #f8f9fa;
-    border-color: #f8f9fa;
-    color: #212529;
-  }
-  
-  #blog .btn-light:hover {
-    background-color: #e2e6ea;
-    border-color: #dae0e5;
-  }
-  
-  
-  
-  #blog {
-    background-image: url('../images/home-background5.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    position: relative;
-    padding: 80px 0;
-  }
-  
-  /* Add an overlay to ensure text readability */
-  #blog::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.8);
-    /* Light overlay for contrast */
-    z-index: 1;
-  }
-  
-  #blog .container {
-    position: relative;
-    z-index: 2;
-  }
-  
-  
-  
-  
-  /* Style adjustments for blog content */
-  #blog .card {
-    background-color: rgba(255, 255, 255, 0.9);
-    border: none;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  #blog .card:hover {
-    transform: translateY(-5px);
-  }
-  
-  #blog .card-img-top {
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  #blog .card-body {
-    padding: 20px;
-  }
-  
-  #blog .card-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  #blog .card-text {
-    color: #666;
-    margin-bottom: 15px;
-  }
-  
-  #blog .btn-primary {
-    background-color: #007bff;
-    border: none;
-    padding: 8px 20px;
-    transition: background-color 0.3s ease;
-  }
-  
-  #blog .btn-primary:hover {
-    background-color: #0056b3;
-  }
-  
-  #blog .btn-light {
-    background-color: #f8f9fa;
-    color: #007bff;
-    border: 1px solid #007bff;
-    padding: 8px 20px;
-    transition: all 0.3s ease;
-  }
-  
-  #blog .btn-light:hover {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  
-  
-  #contact {
-    background-color: grey;
-    padding: 80px 0;
-    color: #000;
-    /* Changed text color to black */
-  }
-  
-  #contact h3 {
-    color: #007bff;
-    margin-bottom: 20px;
-  }
-  
-  #contact ul {
-    margin-bottom: 30px;
-  }
-  
-  #contact ul li {
-    margin-bottom: 10px;
-  }
-  
-  #contact ul li i {
-    color: #007bff;
-    margin-right: 10px;
-  }
-  
-  #contact form {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  #contact form label {
-    font-weight: bold;
-    color: #000;
-    /* Ensure labels are black */
-  }
-  
-  #contact form .form-control {
-    margin-bottom: 20px;
-    color: #000;
-    /* Ensure input text is black */
-  }
-  
-  #contact form .form-control::placeholder {
-    color: #6c757d;
-    /* A lighter color for placeholder text */
-  }
-  
-  #contact form button {
-    width: 100%;
-  }
-  
-  
-  /* Testimonials Section */
-  #testimonials .testimonial-item {
-    max-width: 700px;
-    margin: 0 auto;
-  
-  }
-  
-  #testimonials .carousel-control-prev,
-  #testimonials .carousel-control-next {
-    width: 50px;
-    height: 50px;
-    background-color: red;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  #testimonials .carousel-control-prev {
-    left: -25px;
-  }
-  
-  #testimonials .carousel-control-next {
-    right: -25px;
-  }
-  
-  #testimonials .carousel-control-prev-icon,
-  #testimonials .carousel-control-next-icon {
-    width: 20px;
-    height: 20px;
-  }
-  
-  #testimonials blockquote {
-    font-style: italic;
-    margin-top: 3rem;
-  }
-  
-  
-  
-  #testimonials .testimonial-item {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  #testimonials blockquote {
-    margin-bottom: 20px;
-    font-style: italic;
-  }
-  
-  #testimonials blockquote footer {
-    margin-top: 15px;
-    font-style: normal;
-  }
-  
-  #testimonials blockquote footer::before {
-    content: "— ";
-    /* Add an em dash before the author name */
-  }
-  
-  #testimonials .carousel-control-prev,
-  #testimonials .carousel-control-next {
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  
-  
-  #testimonials blockquote footer::before {
-    content: "";
-    display: block;
-    width: 50px;
-    height: 2px;
-    background-color: red;
-    /* Or any color that fits your design */
-    margin: 15px auto;
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  .social-links {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  
-  .social-links a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 1.2rem;
-    margin-right: 15px;
-    transition: all 0.3s ease;
-  }
-  
-  .social-links a:hover {
-    background-color: #0056b3;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Specific colors for each platform (optional) */
-  .social-links a[title="GitHub"] {
-    background-color: #333;
-  }
-  
-  .social-links a[title="LinkedIn"] {
-    background-color: #0077B5;
-  }
-  
-  .social-links a[title="Kaggle"] {
-    background-color: #20BEFF;
-  }
-  
-  .social-links a[title="LeetCode"] {
-    background-color: #FFA116;
-  }
-  
-  .social-links a[title="GitHub"]:hover {
-    background-color: #24292e;
-  }
-  
-  .social-links a[title="LinkedIn"]:hover {
-    background-color: #005fa3;
-  }
-  
-  .social-links a[title="Kaggle"]:hover {
-    background-color: #1ca8cd;
-  }
-  
-  .social-links a[title="LeetCode"]:hover {
-    background-color: #d68910;
-  }
-  
-  #goToTopBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 9999;
-    border: none;
-    outline: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 50%;
-    font-size: 18px;
-    transition: opacity 0.3s;
-  }
-  
-  #goToTopBtn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
+#about {
+  padding: 80px 0;
+}
 
-  /* Papers Section Styles */
+#about h3 {
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+#about h3 i {
+  margin-right: 10px;
+}
+
+.personal-intro {
+  background-color: #f8f9fa;
+  border-left: 4px solid #007bff;
+  padding: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.personal-intro p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.personal-intro p:last-child {
+  margin-bottom: 0;
+}
+
+
+
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  list-style: none;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: #007bff;
+}
+
+.timeline li {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -36px;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #007bff;
+}
+
+.skill-item {
+  margin-bottom: 20px;
+}
+
+.skill-item h4 {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.skill-item p {
+  color: #666;
+}
+
+
+
+
+
+
+#projects {
+  background-color: whitesmoke;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  padding: 80px 0;
+}
+
+/* Add an overlay to ensure text readability */
+#projects::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Adjust opacity as needed */
+  z-index: 1;
+}
+
+#projects .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Adjust text color for better contrast if needed */
+#projects h2,
+#projects p {
+  color: #333;
+  /* Adjust color as needed */
+}
+
+/* Project Cards Transition Effects */
+#projects .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#projects .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+#contact {
+  background-color: #5a5a5a;
+  color: #fff;
+}
+
+#blog {
+  background-color: #f4f4f4;
+}
+
+footer {
+
+  color: #fff;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-social-links a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-left: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-social-links a:hover {
+  color: #007bff;
+}
+
+
+/* Specific hover colors for each platform (optional) */
+.footer-social-links a[title="GitHub"]:hover {
+  color: #6e5494;
+}
+
+.footer-social-links a[title="LinkedIn"]:hover {
+  color: #0077B5;
+}
+
+.footer-social-links a[title="Kaggle"]:hover {
+  color: #20BEFF;
+}
+
+.footer-social-links a[title="LeetCode"]:hover {
+  color: #FFA116;
+}
+
+
+
+/* Custom Styles */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  text-align: center;
+}
+
+/* Skills Section */
+#skills .skill-item {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+#skills .skill-item:hover {
+  transform: translateY(-5px);
+}
+
+#skills .progress {
+  height: 10px;
+  margin-top: 10px;
+}
+
+#skills .progress-bar {
+  background-color: #007bff;
+}
+
+#skills i {
+  color: #007bff;
+}
+
+
+.skills-background {
+  background-image: url('../images/home2-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.skills-overlay {
+  background-color: rgba(255, 255, 255, 0.9);
+  /* white overlay */
+  padding: 60px 0;
+  width: 100%;
+}
+
+#skills h2 {
+  color: #007bff;
+  margin-bottom: 40px;
+}
+
+#skills h3 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+#skills h3 i {
+  margin-right: 10px;
+}
+
+.skill-category {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category h4 {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.skill-category p {
+  color: #666;
+  margin-bottom: 0;
+}
+
+#skills ul {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#skills ul li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+#skills ul li i {
+  color: #28a745;
+  margin-right: 10px;
+}
+
+
+
+
+
+/* Project Filter Buttons */
+.filter-btn {
+  margin: 0 5px 10px;
+}
+
+.filter-btn.active {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Blog Styles */
+.blog-post {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.blog-post h2 a {
+  color: #333;
+  text-decoration: none;
+}
+
+.blog-post h2 a:hover {
+  color: #007bff;
+}
+
+/* Blog Section Styles */
+#blog {
+  background-color: #f4f4f4;
+  /* Light gray background */
+  color: #333;
+  /* Dark text color */
+}
+
+#blog .card {
+  background-color: #ffffff;
+  /* White background for cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+}
+
+#blog .card-body {
+  color: #333;
+  /* Dark text color for card content */
+}
+
+#blog .card-title {
+  color: #007bff;
+  /* Blue color for titles, you can adjust this */
+}
+
+#blog .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #ffffff;
+}
+
+#blog .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+#blog .btn-light {
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+  color: #212529;
+}
+
+#blog .btn-light:hover {
+  background-color: #e2e6ea;
+  border-color: #dae0e5;
+}
+
+
+
+#blog {
+  background-image: url('../images/home-background5.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  padding: 80px 0;
+}
+
+/* Add an overlay to ensure text readability */
+#blog::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Light overlay for contrast */
+  z-index: 1;
+}
+
+#blog .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+
+/* Style adjustments for blog content */
+#blog .card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+#blog .card:hover {
+  transform: translateY(-5px);
+}
+
+#blog .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+#blog .card-body {
+  padding: 20px;
+}
+
+#blog .card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#blog .card-text {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+#blog .btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 8px 20px;
+  transition: background-color 0.3s ease;
+}
+
+#blog .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+#blog .btn-light {
+  background-color: #f8f9fa;
+  color: #007bff;
+  border: 1px solid #007bff;
+  padding: 8px 20px;
+  transition: all 0.3s ease;
+}
+
+#blog .btn-light:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+
+
+#contact {
+  background-color: grey;
+  padding: 80px 0;
+  color: #000;
+  /* Changed text color to black */
+}
+
+#contact h3 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+#contact ul {
+  margin-bottom: 30px;
+}
+
+#contact ul li {
+  margin-bottom: 10px;
+}
+
+#contact ul li i {
+  color: #007bff;
+  margin-right: 10px;
+}
+
+#contact form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contact form label {
+  font-weight: bold;
+  color: #000;
+  /* Ensure labels are black */
+}
+
+#contact form .form-control {
+  margin-bottom: 20px;
+  color: #000;
+  /* Ensure input text is black */
+}
+
+#contact form .form-control::placeholder {
+  color: #6c757d;
+  /* A lighter color for placeholder text */
+}
+
+#contact form button {
+  width: 100%;
+}
+
+
+/* Testimonials Section */
+#testimonials .testimonial-item {
+  max-width: 700px;
+  margin: 0 auto;
+
+}
+
+#testimonials .carousel-control-prev,
+#testimonials .carousel-control-next {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#testimonials .carousel-control-prev {
+  left: -25px;
+}
+
+#testimonials .carousel-control-next {
+  right: -25px;
+}
+
+#testimonials .carousel-control-prev-icon,
+#testimonials .carousel-control-next-icon {
+  width: 20px;
+  height: 20px;
+}
+
+#testimonials blockquote {
+  font-style: italic;
+  margin-top: 3rem;
+}
+
+
+
+#testimonials .testimonial-item {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#testimonials blockquote {
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+#testimonials blockquote footer {
+  margin-top: 15px;
+  font-style: normal;
+}
+
+#testimonials blockquote footer::before {
+  content: "— ";
+  /* Add an em dash before the author name */
+}
+
+#testimonials .carousel-control-prev,
+#testimonials .carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+
+#testimonials blockquote footer::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: red;
+  /* Or any color that fits your design */
+  margin: 15px auto;
+}
+
+
+
+
+
+
+
+
+
+.social-links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.social-links a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1.2rem;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific colors for each platform (optional) */
+.social-links a[title="GitHub"] {
+  background-color: #333;
+}
+
+.social-links a[title="LinkedIn"] {
+  background-color: #0077B5;
+}
+
+.social-links a[title="Kaggle"] {
+  background-color: #20BEFF;
+}
+
+.social-links a[title="LeetCode"] {
+  background-color: #FFA116;
+}
+
+.social-links a[title="GitHub"]:hover {
+  background-color: #24292e;
+}
+
+.social-links a[title="LinkedIn"]:hover {
+  background-color: #005fa3;
+}
+
+.social-links a[title="Kaggle"]:hover {
+  background-color: #1ca8cd;
+}
+
+.social-links a[title="LeetCode"]:hover {
+  background-color: #d68910;
+}
+
+#goToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 9999;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: opacity 0.3s;
+}
+
+#goToTopBtn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Papers Section Styles */
 
 #papers {
   padding: 60px 0;
   position: 60px;
   background-image: url('../Images/paperbg.jpg');
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
-  color: black; 
-  backdrop-filter: blur(30px); /* Apply blur effect */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black;
+  backdrop-filter: blur(30px);
+  /* Apply blur effect */
 }
 
 #papers .card {
   border: 1px solid white;
   border-radius: 5px;
   overflow: hidden;
-  background:whitesmoke; /* Add a semi-transparent background for cards to ensure text readability */
+  background: whitesmoke;
+  /* Add a semi-transparent background for cards to ensure text readability */
 }
 
 #papers .card-body {
@@ -832,9 +866,12 @@ html {
 
 
 .bold-line {
-  border-top: 4px solid  #007bff; /* Thick and bold line */
-  width: 50px; /* Short line */
-  margin: 10px auto 0; /* Center the line and add some spacing */
+  border-top: 4px solid #007bff;
+  /* Thick and bold line */
+  width: 50px;
+  /* Short line */
+  margin: 10px auto 0;
+  /* Center the line and add some spacing */
 }
 
 
