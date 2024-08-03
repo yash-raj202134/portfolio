@@ -661,7 +661,7 @@ footer {
 #testimonials .carousel-control-next {
   width: 50px;
   height: 50px;
-  background-color: red;
+  background-color: #007bff;
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
@@ -722,7 +722,7 @@ footer {
   display: block;
   width: 50px;
   height: 2px;
-  background-color: red;
+  background-color: #007bff;
   /* Or any color that fits your design */
   margin: 15px auto;
 }
