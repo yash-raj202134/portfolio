@@ -504,6 +504,13 @@ footer {
   border-color: #dae0e5;
 }
 
+.blog-tags .badge {
+  font-size: 0.8em;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+}
+
+
 
 
 #blog {
