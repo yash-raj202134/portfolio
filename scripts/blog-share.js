@@ -18,3 +18,9 @@ function shareOnLinkedIn(title, url) {
 function openShareWindow(url) {
     window.open(url, '_blank', 'width=600,height=400');
 }
+
+function shareOnWhatsApp(title, url) {
+    const text = `${title} - Check out this blog post: ${window.location.origin}/${url}`;
+    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(text)}`;
+    window.open(whatsappUrl, '_blank');
+}
