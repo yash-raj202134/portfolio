@@ -24,3 +24,10 @@ function shareOnWhatsApp(title, url) {
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(text)}`;
     window.open(whatsappUrl, '_blank');
 }
+
+function redirectToGmail(blogTitle) {
+    const subject = encodeURIComponent(`Question about: ${blogTitle}`);
+    const body = encodeURIComponent(`Hi Yash,\n\nI have a question about your blog post titled '${blogTitle}'.\n\n[Please write your question here]\n\nBest regards,\n[Your Name]`);
+    const mailToLink = `https://mail.google.com/mail/?view=cm&fs=1&to=yashraj3376@gmail.com&su=${subject}&body=${body}`;
+    window.open(mailToLink, '_blank');
+}
