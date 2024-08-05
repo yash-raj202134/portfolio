@@ -71,6 +71,9 @@ portfolio-website/
 
 To view the website locally, open `index.html` in your preferred web browser. Ensure that all directories and files are properly placed as per the structure mentioned above.
 
+## Disclaimer
+All files, images, documents, and other resources shared on making this website are the exclusive property of the owner (myself). Unauthorized use, reproduction, or distribution of these materials is strictly prohibited and may result in legal action. If you have any questions or require permission to use any of the resources, please contact me directly.
+
 ## Contributions and Suggestions
 
 Contributions and suggestions are welcome! If you have any ideas, improvements, or find any issues, please feel free to create a pull request or open an issue in this repository. Your feedback is highly appreciated.
