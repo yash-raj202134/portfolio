@@ -19,7 +19,7 @@ This portfolio website is designed to present my professional profile, including
 ## Structure
 
 ```bash
-## Files structure
+## Basic Files/Folders structure
 
 portfolio-website/
 ├── index.html
