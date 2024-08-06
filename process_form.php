@@ -1,56 +1,35 @@
 <?php
-require 'vendor/autoload.php'; // You'll need to install PhpSpreadsheet and PHPMailer via Composer
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
+// Log incoming data
+file_put_contents('form_debug.log', print_r($_POST, true), FILE_APPEND);
 header('Content-Type: application/json');
 
-$response = ['success' => false, 'message' => ''];
+$response = array('success' => false, 'message' => '');
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name = $_POST['name'] ?? '';
-    $email = $_POST['email'] ?? '';
-    $message = $_POST['message'] ?? '';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
 
-    if ($name && $email && $message) {
-        // Store in Excel
-        $spreadsheet = new Spreadsheet();
-        $sheet = $spreadsheet->getActiveSheet();
-        $sheet->setCellValue('A1', 'Name');
-        $sheet->setCellValue('B1', 'Email');
-        $sheet->setCellValue('C1', 'Message');
-        $sheet->setCellValue('D1', 'Date');
-
-        $row = $sheet->getHighestRow() + 1;
-        $sheet->setCellValue('A' . $row, $name);
-        $sheet->setCellValue('B' . $row, $email);
-        $sheet->setCellValue('C' . $row, $message);
-        $sheet->setCellValue('D' . $row, date('Y-m-d H:i:s'));
-
-        $writer = new Xlsx($spreadsheet);
-        $writer->save('contact_messages.xlsx');
-
-        // Send email
-        $mail = new PHPMailer(true);
-        try {
-            $mail->setFrom('yashraj3376@gmail.com', 'Yash');
-            $mail->addAddress('yashraj3376@gmail.com', 'Yash');
-            $mail->Subject = 'New Contact Form Submission';
-            $mail->Body    = "Name: $name\nEmail: $email\nMessage: $message";
-            $mail->send();
-        } catch (Exception $e) {
-            $response['message'] = 'Message could not be sent. Mailer Error: ' . $mail->ErrorInfo;
-            echo json_encode($response);
-            exit;
-        }
-
-        $response['success'] = true;
-        $response['message'] = 'Message sent successfully!';
+    if (empty($name) || empty($email) || empty($message)) {
+        $response['message'] = 'Please fill in all fields.';
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $response['message'] = 'Please enter a valid email address.';
     } else {
-        $response['message'] = 'Please fill all fields.';
+        // Process the form data (e.g., send an email)
+        $to = "yashraj3376@gmail.com";
+        $subject = "New Contact Form Submission";
+        $body = "Name: $name\nEmail: $email\nMessage: $message";
+        $headers = "From: $email";
+
+        if (mail($to, $subject, $body, $headers)) {
+            $response['success'] = true;
+            $response['message'] = 'Thank you! Your message has been sent.';
+        } else {
+            $response['message'] = 'Oops! Something went wrong. Please try again later.';
+        }
     }
 } else {
     $response['message'] = 'Invalid request method.';
