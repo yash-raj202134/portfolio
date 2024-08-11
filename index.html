@@ -1206,12 +1206,13 @@
           </div>
 
           <!-- Subscription Form -->
-          <form action="subscribe.php" method="POST" class="mt-3">
+          <form name="submit-to-google-sheet" class="mt-3">
             <div class="mb-2">
               <input type="email" name="email" class="form-control" placeholder="Subscribe to newsletter" required>
             </div>
             <button type="submit" class="btn btn-primary btn-sm w-100">Subscribe</button>
           </form>
+          <span class="subscription" id="msg"></span>
         </div>
       </div>
 
@@ -1230,6 +1231,7 @@
   <script src="scripts/background-changer.js"></script>
   <script src="scripts/project-filter.js"></script>
   <script src="scripts/contact-form.js"></script>
+  <script src="scripts/newsletter-subscription.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

@@ -13,6 +13,12 @@ body {
   /* Adjust this value based on your navbar height */
 }
 
+.subscription{
+  color: #61b752;
+  margin-top: 10px;
+  display: block;
+
+}
 .full-page {
   width: 100%;
   min-height: 100vh;
