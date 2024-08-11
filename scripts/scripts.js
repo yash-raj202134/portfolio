@@ -67,23 +67,5 @@ document.addEventListener('DOMContentLoaded', function () {
   }, 100);
 
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    const formData = new FormData(form);
-
-    fetch('your-server-endpoint', {
-      method: 'POST',
-      body: formData
-    })
-      .then(response => response.json())
-      .then(data => {
-        alert('Message sent successfully!');
-        form.reset();
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        alert('An error occurred. Please try again.');
-      });
-  });
 });
 
