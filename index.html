@@ -1117,8 +1117,10 @@
           </ul>
         </div>
         
+
+
         <div class="col-md-6">
-          <form action="https://api.web3forms.com/submit" method="POST">
+          <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
             <div class="form-group">
               <input type="hidden" name="access_key" value="4ccdb722-03b1-494b-99ff-388a411d1fe0">
               <label for="name">Name</label>
@@ -1132,11 +1134,20 @@
               <label for="message">Message</label>
               <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Send Message <i class="fa fa-paper-plane"
-                aria-hidden="true"></i></button>
+            <button type="submit" class="btn btn-primary">Send Message <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
           </form>
-
         </div>
+        
+        <!-- Custom Modal Popup -->
+        <div id="alertModal" class="custom-modal">
+          <div class="custom-modal-content">
+            <span class="custom-close">&times;</span>
+            <p id="alertMessage"></p>
+            <button id="closeButton" class="btn">Close</button>
+          </div>
+        </div>
+        
+
       </div>
     </div>
   </section>
