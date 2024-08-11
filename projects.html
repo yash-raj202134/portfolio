@@ -65,6 +65,13 @@
       margin: 10px auto 0;
       /* Center the line and add some spacing */
     }
+
+    .subscription {
+      color: #61b752;
+      margin-top: 10px;
+      display: block;
+
+    }
   </style>
 </head>
 
@@ -94,10 +101,10 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html#projects">Projects</a>
+            <a class="nav-link" href="#projects">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html#blog">Blog</a>
+            <a class="nav-link" href="blog-listing.html">Blog</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="index.html#papers">Papers</a>
@@ -881,12 +888,12 @@
         <div class="col-md-2">
           <h5>Quick Links</h5>
           <ul class="list-unstyled">
-            <li><a href="#about" class="text-white">About Me</a></li>
+            <li><a href="index.html#about" class="text-white">About Me</a></li>
             <li><a href="cv.html" class="text-white">Curriculum Vitae</a></li>
-            <li><a href="#projects" class="text-white">Projects</a></li>
-            <li><a href="#blog" class="text-white">Blog</a></li>
-            <li><a href="#papers" class="text-white">Papers</a></li>
-            <li><a href="#contact" class="text-white">Contact</a></li>
+            <li><a href="#top" class="text-white">Projects</a></li>
+            <li><a href="blog-listing.html" class="text-white">Blog</a></li>
+            <li><a href="index.html#papers" class="text-white">Papers</a></li>
+            <li><a href="index.html#contact" class="text-white">Contact</a></li>
           </ul>
         </div>
 
@@ -911,12 +918,13 @@
           </div>
 
           <!-- Subscription Form -->
-          <form action="subscribe.php" method="POST" class="mt-3">
+          <form name="submit-to-google-sheet" class="mt-3">
             <div class="mb-2">
               <input type="email" name="email" class="form-control" placeholder="Subscribe to newsletter" required>
             </div>
             <button type="submit" class="btn btn-primary btn-sm w-100">Subscribe</button>
           </form>
+          <span class="subscription" id="msg"></span>
         </div>
       </div>
 
@@ -931,6 +939,7 @@
 
 
   <!-- jQuery and Bootstrap JS -->
+  <script src="scripts/newsletter-subscription.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
