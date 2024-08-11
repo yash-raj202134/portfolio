@@ -45,7 +45,7 @@ body {
 
 
 #home {
-  background-image: url('../images/home4-background.jpg');
+  background-image: url('../images/home-background/home-background4.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -367,7 +367,7 @@ footer {
 
 
 .skills-background {
-  background-image: url('../images/home2-background.jpg');
+  background-image: url('../images/page-background/skillsbg2.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -535,7 +535,7 @@ footer {
 }
 
 #blog {
-  background-image: url('../images/home-background5.jpg');
+  background-image: url('../images/page-background/blogbg.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -848,7 +848,7 @@ footer {
 #papers {
   padding: 60px 0;
   position: 60px;
-  background-image: url('../Images/paperbg.jpg');
+  background-image: url('../Images/page-background/paperbg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
