@@ -1116,9 +1116,11 @@
               Mahendergarh 123029, Haryana </li>
           </ul>
         </div>
+        
         <div class="col-md-6">
-          <form id="contact-form">
+          <form action="https://api.web3forms.com/submit" method="POST">
             <div class="form-group">
+              <input type="hidden" name="access_key" value="4ccdb722-03b1-494b-99ff-388a411d1fe0">
               <label for="name">Name</label>
               <input type="text" class="form-control" id="name" name="name" required>
             </div>
@@ -1133,7 +1135,6 @@
             <button type="submit" class="btn btn-primary">Send Message <i class="fa fa-paper-plane"
                 aria-hidden="true"></i></button>
           </form>
-          <div id="form-status" class="alert" style="display: none;"></div>
 
         </div>
       </div>
