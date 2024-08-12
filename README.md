@@ -62,10 +62,10 @@ portfolio-website/
 
 ## Features
 
-- Responsive design
-- Interactive blog listing and individual blog posts
-- Project showcase with filtering functionality
-- Resume download option
+- Responsive design.
+- Interactive blog listing and individual blog posts.
+- Project showcase with filtering functionality.
+- Resume download option.
 
 ## Usage
 
@@ -76,4 +76,4 @@ All files, images, documents, and other resources shared on making this website 
 
 ## Contributions and Suggestions
 
-Contributions and suggestions are welcome! If you have any ideas, improvements, or find any issues, please feel free to create a pull request or open an issue in this repository. Your feedback is highly appreciated.
+Contributions and suggestions are welcome! If you have any ideas, improvements, or find any issues, please feel free to create a pull request or open an issue in this repository. Your feedback is highly appreciated..
