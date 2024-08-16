@@ -11,6 +11,18 @@
 //     });
 //   });
 
+window.onload = function() {
+  // Check if the redirect flag is set in session storage
+  if (!sessionStorage.getItem('redirected')) {
+      // If not redirected yet, set the flag and redirect to x.html
+      sessionStorage.setItem('redirected', 'true');
+      window.location.href = "../index.html";
+  } else {
+      // If already redirected, clear the flag for future reloads
+      sessionStorage.removeItem('redirected');
+  }
+};
+
 let prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
   let currentScrollPos = window.pageYOffset;
