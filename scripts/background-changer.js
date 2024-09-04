@@ -26,5 +26,5 @@ backgrounds.forEach(src => {
     img.src = src;
 });
 
-// Change background every 10 seconds x 6 = 60 seconds = 1 minutes
-setInterval(changeBackground, 10000*6);
+// Change background every 10 seconds x 3 = 30 seconds
+setInterval(changeBackground, 10000*3);
