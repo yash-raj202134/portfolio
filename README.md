@@ -37,6 +37,13 @@ portfolio-website/
 │   ├── project-filter.js
 │   ├── other scripts...
 ├── images/
+│   ├── blog-images
+│   ├── home-background
+│   ├── page-background
+│   ├── project-images
+│   ├── testimonial-images
+│   ├── others...
+│   
 ├── files/
 │    ├── resume.pdf
 │    ├── other files...
