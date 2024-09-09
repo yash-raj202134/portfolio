@@ -64,6 +64,11 @@
         <article class="blog-post">
           <h2 class="mb-4">Machine Learning Trends in 2024</h2>
           <p class="text-muted">Posted on July 15, 2024</p>
+          
+          <div class="views-section mt-4">
+            <p><i class="fas fa-eye"></i> Views: <span id="view-count">0</span></p>
+          </div>
+          
           <div class="blog-tags mb-4">
             <span class="badge bg-secondary me-1">Machine Learning</span>
             <span class="badge bg-secondary me-1">AI Trends 2024</span>
@@ -141,9 +146,12 @@
           </p>
 
           <p class="text-muted">Author - Yash Raj </p>
-
-          <a href="../blog-listing.html" class="btn btn-secondary mt-4">Back to Blog</a>
-
+          <div class="like-section mt-4">
+            <button id="like-button" class="btn btn-outline-danger">
+              <i class="fas fa-heart"></i> Like <span id="like-count">0</span>
+            </button>
+          </div>
+        
 
           <div class="social-share mt-4">
             <h6>Share this post</h6>
@@ -160,12 +168,16 @@
               onclick="shareOnLinkedIn('Machine Learning Trends in 2024', 'blog/post1-Machine_Learning_Trends_in_2024.html')"><i
                 class="fab fa-linkedin-in"></i> LinkedIn</button>
           </div>
-
+          
           <div class="contact-section mt-5">
             <h6>If you have any questions regarding this post, feel free to drop me a mail</h6>
             <button class="btn btn-primary" onclick="redirectToGmail('Machine Learning Trends in 2024')"><i
                 class="fas fa-envelope"></i> Drop Mail</button>
           </div>
+
+          
+
+          <a href="../blog-listing.html" class="btn btn-secondary mt-4">Back to Blog</a>
 
           <!-- References Section -->
 
@@ -309,6 +321,7 @@
   <!-- jQuery and Bootstrap JS -->
   <script src="../scripts/blog-share.js"></script>
   <script src="../scripts/newsletter-subscription.js"></script>
+  <script src="../scripts/likes-views-counter.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
