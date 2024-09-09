@@ -147,7 +147,7 @@
             Proven track record of delivering high-quality solutions and achieving measurable results.
           </p>
         </div>
-        
+
         <div class="col-md-6">
           <h3><i class="fa fa-building" aria-hidden="true"></i> Experience</h3>
           <ul class="timeline">
@@ -992,13 +992,16 @@
 
             <div class="card-body">
               <h5 class="card-title">Understanding Neural Processing Units (NPU): The Future of AI Accelerators</h5>
-              <p class="card-text">Neural Processing Units (NPUs), cutting-edge processors designed to optimize artificial
-                intelligence and machine learning tasks. It examines how NPUs enhance performance, energy efficiency, and
-                scalability across various applications, from mobile devices and automotive systems to healthcare and edge
+              <p class="card-text">Neural Processing Units (NPUs), cutting-edge processors designed to optimize
+                artificial
+                intelligence and machine learning tasks. It examines how NPUs enhance performance, energy efficiency,
+                and
+                scalability across various applications, from mobile devices and automotive systems to healthcare and
+                edge
                 computing.</p>
               <p class="text-muted">Posted on Aug 27, 2024</p>
-              <a href="blog/post5-Understanding_Neural_Processing_Units_(NPU).html"
-                class="btn btn-primary">Read More</a>
+              <a href="blog/post5-Understanding_Neural_Processing_Units_(NPU).html" class="btn btn-primary">Read
+                More</a>
             </div>
           </div>
         </div>
@@ -1124,25 +1127,63 @@
 
 
 
-        <div class="col-md-6">
+        <!-- Contact Form Section -->
+        <div class="col-md-6 p-4"
+          style="background-color: #f9f9f9; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); max-width: 600px; margin: auto;">
+          <h4 class="text-center mb-4" style="color: #343a40;">Connect Me!</h4>
+
+          <!-- Contact Form -->
           <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-            <div class="form-group">
-              <input type="hidden" name="access_key" value="4ccdb722-03b1-494b-99ff-388a411d1fe0">
-              <label for="name">Name</label>
-              <input type="text" class="form-control" id="name" name="name" required>
+            <!-- Access Key -->
+            <input type="hidden" name="access_key" value="4ccdb722-03b1-494b-99ff-388a411d1fe0">
+
+            <!-- Name Field -->
+            <div class="form-group mb-4">
+              <label for="name" style="font-weight: bold; color: #495057;">Your Name</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"
+                    style="background-color: #007bff; color: #fff; border-radius: 10px 0 0 10px;"><i
+                      class="fas fa-user"></i></span>
+                </div>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required
+                  style="border-radius: 0 10px 10px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+              </div>
             </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" name="email" required>
+
+            <!-- Email Field -->
+            <div class="form-group mb-4">
+              <label for="email" style="font-weight: bold; color: #495057;">Your Email</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"
+                    style="background-color: #007bff; color: #fff; border-radius: 10px 0 0 10px;"><i
+                      class="fas fa-envelope"></i></span>
+                </div>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required
+                  style="border-radius: 0 10px 10px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+              </div>
             </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+
+            <!-- Message Field -->
+            <div class="form-group mb-4">
+              <label for="message" style="font-weight: bold; color: #495057;">Message</label>
+              <div class="input-group">
+                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message here..."
+                  required style="border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"></textarea>
+              </div>
             </div>
-            <button type="submit" class="btn btn-primary">Send Message <i class="fa fa-paper-plane"
-                aria-hidden="true"></i></button>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary btn-block"
+              style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0,123,255,0.3); transition: 0.3s; font-weight: bold;"
+              onmouseover="this.style.boxShadow='0 6px 12px rgba(0,123,255,0.5)'"
+              onmouseout="this.style.boxShadow='0 4px 10px rgba(0,123,255,0.3)'">
+              Send Message <i class="fas fa-paper-plane"></i>
+            </button>
           </form>
         </div>
+
 
         <!-- Custom Modal Popup -->
         <div id="alertModal" class="custom-modal">
