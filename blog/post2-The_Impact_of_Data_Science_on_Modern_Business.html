@@ -12,6 +12,26 @@
   <link rel="stylesheet" href="../styles/test_styles.css">
   <link rel="stylesheet" href="../styles/blog-styles.css">
   <link rel="stylesheet" href="../styles/blog-post-styles.css">
+  <!-- script -->
+  <script>
+    // JavaScript to load external navbar
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch("../misc/navbar.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("navbar-placeholder").innerHTML = data;
+        });
+    });
+
+    // JavaScript to load external footer
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch("../misc/footer.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    });
+  </script>
 
 </head>
 
@@ -315,26 +335,7 @@
   <!-- Footer placeholder -->
   <div id="footer-placeholder"></div>
 
-  <!-- script -->
-  <script>
-    // JavaScript to load external navbar
-    document.addEventListener("DOMContentLoaded", function () {
-      fetch("../misc/navbar.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("navbar-placeholder").innerHTML = data;
-        });
-    });
-
-    // JavaScript to load external footer
-    document.addEventListener("DOMContentLoaded", function () {
-      fetch("../misc/footer.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("footer-placeholder").innerHTML = data;
-        });
-    });
-  </script>
+  
 
   <!-- jQuery and Bootstrap JS -->
   <script src="../scripts/blog-share.js"></script>
