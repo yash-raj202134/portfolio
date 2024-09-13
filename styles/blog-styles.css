@@ -50,10 +50,15 @@
     margin-bottom: 10px;
 }
 
+
 @media (max-width: 576px) {
     .blog-post .social-share button {
         display: block;
-        width: 100%;
+        /* width: 100%; */
         margin-bottom: 10px;
     }
+    
+    .social-share .social-btn i {
+        line-height: 1;
+      }
 }

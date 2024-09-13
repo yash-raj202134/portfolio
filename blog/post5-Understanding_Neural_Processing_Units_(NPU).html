@@ -13,52 +13,68 @@
   <link rel="stylesheet" href="../styles/blog-styles.css">
   <style>
     h2 {
-    font-size: 2.0rem;
-    font-weight: 600;
-    color: #2c3e50;
-    margin-top: 0.3em;
-    margin-bottom: 1.5em;
-    line-height: 1.2;
-    letter-spacing: -0.5px;
-    text-align: left;
-    border-bottom: 2px solid whitesmoke;
-    padding-bottom: 0.5em;
-    position: relative;
-  }
-    h5 {
-    font-weight: bold;
-    font-size: 1.25rem;
-    margin-top: 2em;
-    margin-bottom: 1em;
-    color: #2c3e50;
-    }
-    h6 {
-    font-weight: bold;
-    font-size: 1.25rem;
-    margin-top: 2em;
-    margin-bottom: 1em;
-    color: white;
+      font-size: 2.0rem;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-top: 0.3em;
+      margin-bottom: 1.5em;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+      text-align: left;
+      border-bottom: 2px solid whitesmoke;
+      padding-bottom: 0.5em;
+      position: relative;
     }
 
-    
-    .social-share .btn {
+    h5 {
+      font-weight: bold;
+      font-size: 1.25rem;
+      margin-top: 2em;
+      margin-bottom: 1em;
+      color: #2c3e50;
+    }
+
+    h6 {
+      font-weight: bold;
+      font-size: 1.25rem;
+      margin-top: 2em;
+      margin-bottom: 1em;
+      color: white;
+    }
+
+    .social-share .social-btn {
       width: 40px;
       height: 40px;
+      padding: 0;
       display: flex;
       align-items: center;
       justify-content: center;
       transition: all 0.3s ease;
+      border-radius: 50%;
+      /* Ensure circular shape */
     }
-    
-    .social-share .btn:hover {
+
+    .social-share .social-btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
-    
-    .social-share .btn-success:hover { background-color: #25D366; }
-    .social-share .btn-primary:hover { background-color: #4267B2; }
-    .social-share .btn-info:hover { background-color: #1DA1F2; }
-    .social-share .btn-primary:last-child:hover { background-color: #0077B5; }
+
+    .social-share .btn-success:hover {
+      background-color: #25D366;
+    }
+
+    .social-share .btn-primary:hover {
+      background-color: #4267B2;
+    }
+
+    .social-share .btn-info:hover {
+      background-color: #1DA1F2;
+    }
+
+    .social-share .btn-primary:last-child:hover {
+      background-color: #0077B5;
+    }
+
   </style>
 </head>
 
@@ -177,7 +193,7 @@
               performance for specific AI models or tasks.</li>
           </ul>
           <h6>Cell-based Neural Processing Unit</h6>
-    
+
           <img src="../images/blog-images/NPU2.jpg" alt="Neural Processing Unit" class="img-fluid mb-4">
           <p>At its core, this design leverages a grid-like arrangement of interconnected cells, each potentially
             representing a neuron or a small cluster of neurons. These cells are organized in multiple rows and columns,
@@ -194,7 +210,7 @@
 
 
           <h5>Why NPUs are Gaining Importance?</h5>
-          
+
           <img src="../images/blog-images/NPU4.webp" alt="Neural Processing Unit" class="img-fluid mb-4">
           <p>The increasing complexity of AI models and the growing volume of data have pushed traditional processors to
             their limits. As AI models become more complex and the volume of data grows exponentially, NPUs have emerged
@@ -242,7 +258,7 @@
           </ul>
 
           <h5>**Core Applications**</h5>
-          
+
           <img src="../images/blog-images/NPU5.jpg" alt="Neural Processing Unit" class="img-fluid mb-4">
 
           <p>Neural Processing Units (NPUs) are rapidly becoming essential in a wide range of applications due to
@@ -264,7 +280,7 @@
 
 
           <h5>Comparison : CPU vs. GPU vs. NPU</h5>
-          
+
           <img src="../images/blog-images/NPU6.jpg" alt="Neural Processing Unit" class="img-fluid mb-4">
           <div class="table-responsive">
             <table class="table table-bordered">
@@ -319,34 +335,34 @@
 
           <p class="text-muted">Author - Yash Raj </p>
 
-         
+
 
 
           <!-- Share Section -->
           <div class="social-share mt-4">
             <h5 class="mb-3">Share this post ?</h5>
             <div class="d-flex flex-wrap gap-2">
-              <button class="btn btn-success rounded-circle"
+              <button class="btn btn-success social-btn"
                 onclick="shareOnWhatsApp('Understanding Neural Processing Units (NPU): The Future of AI Accelerators', 'blog/post5-Understanding_Neural_Processing_Units.html')"
                 title="Share on WhatsApp">
                 <i class="fab fa-whatsapp"></i>
               </button>
-              <button class="btn btn-primary rounded-circle"
+              <button class="btn btn-primary social-btn"
                 onclick="shareOnFacebook('Understanding Neural Processing Units (NPU): The Future of AI Accelerators', 'blog/post5-Understanding_Neural_Processing_Units.html')"
                 title="Share on Facebook">
                 <i class="fab fa-facebook-f"></i>
               </button>
-              <button class="btn btn-info rounded-circle"
+              <button class="btn btn-info social-btn"
                 onclick="shareOnTwitter('Understanding Neural Processing Units (NPU): The Future of AI Accelerators', 'blog/post5-Understanding_Neural_Processing_Units.html')"
                 title="Share on Twitter">
                 <i class="fab fa-twitter"></i>
               </button>
-              <button class="btn btn-primary rounded-circle"
+              <button class="btn btn-primary social-btn"
                 onclick="shareOnLinkedIn('Understanding Neural Processing Units (NPU): The Future of AI Accelerators', 'blog/post5-Understanding_Neural_Processing_Units.html')"
                 title="Share on LinkedIn">
                 <i class="fab fa-linkedin-in"></i>
               </button>
-              
+
             </div>
           </div>
 
