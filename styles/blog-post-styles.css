@@ -1,0 +1,62 @@
+h2 {
+    font-size: 2.0rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-top: 0.2em;
+    margin-bottom: 1.5em;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    text-align: left;
+    border-bottom: 2px solid whitesmoke;
+    padding-bottom: 0.5em;
+    position: relative;
+}
+
+h5 {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    color: #2c3e50;
+}
+
+h6 {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    color: white;
+}
+
+.social-share .social-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    /* Ensure circular shape */
+}
+
+.social-share .social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-share .btn-success:hover {
+    background-color: #25D366;
+}
+
+.social-share .btn-primary:hover {
+    background-color: #4267B2;
+}
+
+.social-share .btn-info:hover {
+    background-color: #1DA1F2;
+}
+
+.social-share .btn-primary:last-child:hover {
+    background-color: #0077B5;
+}
