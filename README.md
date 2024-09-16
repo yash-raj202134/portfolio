@@ -43,10 +43,17 @@ portfolio-website/
 │   ├── project-images
 │   ├── testimonial-images
 │   ├── others...
-│   
+│
+├── misc/
+│   ├── aboutme.html
+│   ├── footer.html
+│   ├── navbar.html
+|   ├── other misc files...
+|
 ├── files/
 │    ├── resume.pdf
 │    ├── other files...
+|
 ├── blog/
 │   ├── post1.html
 │   ├── post2.html
