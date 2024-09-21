@@ -59,6 +59,7 @@ portfolio-website/
 │   ├── post2.html
 │   ├── other posts...
 ├── README.md
+├── .htaccess 
 ```
 - `index.html`: The landing page of the website.
 - `cv.html`: Page containing my resume.
@@ -79,6 +80,7 @@ portfolio-website/
   - `post2.html`: Second blog post.
 - `README.md`: This README file.
 - `test.html`: For testing purpose..
+- `.htaccess`: Security file..
 ## Features
 
 - Responsive design.
