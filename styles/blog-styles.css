@@ -57,8 +57,30 @@
         /* width: 100%; */
         margin-bottom: 10px;
     }
-    
+
     .social-share .social-btn i {
         line-height: 1;
-      }
+    }
+}
+
+
+
+.toc {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-right: 200px;
+    margin-left: 0px; 
+}
+
+.toc a {
+    display: block;
+    padding: 5px;
+    color: #007bff;
+    text-decoration: aliceblue;
+}
+
+.toc a:hover {
+    text-decoration: underline;
 }
