@@ -14,12 +14,12 @@
   <link rel="stylesheet" href="../styles/blog-post-styles.css">
   <link rel="stylesheet" href="../styles/custom-button.css">
 
-  
+
 </head>
 
 <body>
- <!-- Navigation bar placeholder -->
- <div id="navbar-placeholder"></div>
+  <!-- Navigation bar placeholder -->
+  <div id="navbar-placeholder"></div>
 
   <div class="container mt-5">
     <br>
@@ -57,7 +57,7 @@
           </div>
           <h2 class="mb-4"></h2>
 
-           <!-- Table of Contents -->
+          <!-- Table of Contents -->
           <div class="toc">
             <h5>Table of Contents</h5>
             <a href="#abstract">Abstract</a>
@@ -67,15 +67,16 @@
           </div>
           <h2 class="mb-4"></h2>
 
-          <img src="../images/blog-images/blog1/machinelearning.jpg" alt="Machine Learning Trends" class="img-fluid mb-4">
+          <img src="../images/blog-images/blog1/machinelearning.jpg" alt="Machine Learning Trends"
+            class="img-fluid mb-4">
 
 
-          
+
           <h5 id="abstract">Abstract</h5>
 
           <p>Machine learning continues to evolve at a rapid pace. In this post, we'll explore the key trends shaping
             the field in 2024.</p>
-         
+
           <p>
             Machine learning, once a specialized field, is rapidly transforming into a cornerstone of modern technology.
             In 2024, the landscape is marked by several pivotal trends. Generative AI and large language models,
@@ -126,8 +127,8 @@
           </p>
 
           <p class="text-muted text-end"><img src="../Images/ico3.ico" alt="Custom Icon"
-            style="width: 24px; height: 24px; margin-right: 10px;"> Author - Yash Raj </p>
-          
+              style="width: 24px; height: 24px; margin-right: 10px;"> Author - Yash Raj </p>
+
           <!-- Share Section -->
           <div class="social-share mt-4">
             <h5 class="mb-3">Share this post ?</h5>
@@ -152,89 +153,15 @@
                 title="Share on LinkedIn">
                 <i class="fab fa-linkedin-in"></i>
               </button>
-              
+
             </div>
           </div>
 
+          <!-- Contact Form container -->
+          <div id="contact-form-container"></div>
 
+          <h2 class="mb-4"></h2>
 
-          <!-- Contact Form Section -->
-          <div class="contact-section mt-5 p-4"
-            style="background-color: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); max-width: 600px; margin: auto;">
-            <h4 class="text-center mb-4" style="color: #343a40;">Have any questions or feedback? </h4>
-            <p class="text-center mb-4" style="color: #6c757d;">Feel free to send me a
-              message!</p>
-
-            <!-- Web3Forms Form -->
-            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-              <!-- Web3Forms Access Key -->
-              <input type="hidden" name="access_key" value="4ccdb722-03b1-494b-99ff-388a411d1fe0">
-
-              <!-- Blog Post Information -->
-              <input type="hidden" name="subject" value="Query about Machine Learning Trends in 2024">
-              <!-- <input type="hidden" name="redirect" value="https://yourwebsite.com/thank-you-page"> -->
-
-              <!-- Name Field -->
-              <div class="form-group mb-4">
-                <label for="name" style="font-weight: bold; color: #495057;">Your Name</label>
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"
-                      style="background-color: #007bff; color: #fff; border-radius: 10px 0 0 10px;"><i
-                        class="fas fa-user"></i></span>
-                  </div>
-                  <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required
-                    style="border-radius: 0 10px 10px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                </div>
-              </div>
-
-              <!-- Email Field -->
-              <div class="form-group mb-4">
-                <label for="email" style="font-weight: bold; color: #495057;">Your Email</label>
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"
-                      style="background-color: #007bff; color: #fff; border-radius: 10px 0 0 10px;"><i
-                        class="fas fa-envelope"></i></span>
-                  </div>
-                  <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email"
-                    required style="border-radius: 0 10px 10px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                </div>
-              </div>
-
-              <!-- Message Field -->
-              <div class="form-group mb-4">
-                <label for="message" style="font-weight: bold; color: #495057;">Message</label>
-                <div class="input-group">
-                  <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your message here..."
-                    required style="border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"></textarea>
-                </div>
-              </div>
-
-              <!-- Submit Button -->
-              <button type="submit" class="btn btn-primary btn-block"
-                style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0,123,255,0.3); transition: 0.3s; font-weight: bold;"
-                onmouseover="this.style.boxShadow='0 6px 12px rgba(0,123,255,0.5)'"
-                onmouseout="this.style.boxShadow='0 4px 10px rgba(0,123,255,0.3)'">
-                <i class="fas fa-paper-plane"></i> Send Message
-              </button>
-            </form>
-
-            <!-- Alternative Email Button -->
-            <div class="mt-4 text-center">
-              <p>Or, email me directly:</p>
-              <button class="btn btn-primary custom-btn" onclick="redirectToGmail('Machine Learning Trends in 2024')"
-                style="border-radius: 10px; box-shadow: 0 4px 10px rgba(108,117,125,0.3); transition: 0.3s;"
-                onmouseover="this.style.boxShadow='0 6px 12px rgba(108,117,125,0.5)'"
-                onmouseout="this.style.boxShadow='0 4px 10px rgba(108,117,125,0.3)'">
-                <i class="fas fa-envelope"></i> Email Me
-              </button>
-            </div>
-          </div>
-
-
-
-          
           <a href="../blog-listing.html" class="btn btn-secondary custom-btn mt-4"
             style="border-radius: 10px; padding: 12px 24px; background-color: #6c757d; color: #fff; font-weight: bold; box-shadow: 0 4px 10px rgba(108,117,125,0.3); transition: 0.3s; text-transform: uppercase;"
             onmouseover="this.style.backgroundColor='#5a6268'; this.style.boxShadow='0 6px 12px rgba(108,117,125,0.5)'"
@@ -277,7 +204,7 @@
               </div>
               <div class="col-md-6 mb-3">
                 <div class="reference-box">
-             
+
                   <p class="reference-details">
                     <em>[3] Cigniti: A Coforge Company : AI/ML Trends in 2023 and Beyond -
                       Srinivas Atreya <br>
@@ -300,14 +227,14 @@
       </div>
     </div>
   </div>
-  
+
   <!-- Footer placeholder -->
   <div id="footer-placeholder"></div>
 
   <!-- script -->
   <script>
     // JavaScript to load external navbar
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       fetch("../misc/navbar.html")
         .then(response => response.text())
         .then(data => {
@@ -316,15 +243,30 @@
     });
 
     // JavaScript to load external footer
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       fetch("../misc/footer.html")
         .then(response => response.text())
         .then(data => {
           document.getElementById("footer-placeholder").innerHTML = data;
         });
     });
+
+    // Function to dynamically load the contact form and inject values
+    function loadContactForm(blogPostTitle) {
+      fetch('../misc/contactform.html')  
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById('contact-form-container').innerHTML = html;
+          document.getElementById('contactSubject').value = `Query about ${blogPostTitle}`;
+          document.getElementById('emailButton').setAttribute('onclick', `redirectToGmail('${blogPostTitle}')`);
+        });
+    }
+
+    // Example usage
+    loadContactForm('Machine Learning Trends in 2024');
+
   </script>
-  
+
   <!-- jQuery and Bootstrap JS -->
   <script src="../scripts/blog-share.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
