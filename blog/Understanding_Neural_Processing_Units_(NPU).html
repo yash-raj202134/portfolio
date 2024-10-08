@@ -1,3 +1,4 @@
+<!-- post id 5 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -252,35 +253,8 @@
               style="width: 24px; height: 24px; margin-right: 10px;"> Author - Yash Raj </p>
 
 
-
-
-          <!-- Share Section -->
-          <div class="social-share mt-4">
-            <h5 class="mb-3">Share this post ?</h5>
-            <div class="d-flex flex-wrap gap-2">
-              <button class="btn btn-success social-btn"
-                onclick="shareOnWhatsApp('Understanding Neural Processing Units (NPU): The Future of AI Accelerators', 'blog/post5-Understanding_Neural_Processing_Units.html')"
-                title="Share on WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-              </button>
-              <button class="btn btn-primary social-btn"
-                onclick="shareOnFacebook('Understanding Neural Processing Units (NPU): The Future of AI Accelerators', 'blog/post5-Understanding_Neural_Processing_Units.html')"
-                title="Share on Facebook">
-                <i class="fab fa-facebook-f"></i>
-              </button>
-              <button class="btn btn-info social-btn"
-                onclick="shareOnTwitter('Understanding Neural Processing Units (NPU): The Future of AI Accelerators', 'blog/post5-Understanding_Neural_Processing_Units.html')"
-                title="Share on Twitter">
-                <i class="fab fa-twitter"></i>
-              </button>
-              <button class="btn btn-primary social-btn"
-                onclick="shareOnLinkedIn('Understanding Neural Processing Units (NPU): The Future of AI Accelerators', 'blog/post5-Understanding_Neural_Processing_Units.html')"
-                title="Share on LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-              </button>
-
-            </div>
-          </div>
+          <!-- Share Section Placeholder -->
+          <div id="shareSectionPlaceholder"></div>
 
           <!-- Contact Form container -->
           <div id="contact-form-container"></div>
@@ -410,6 +384,23 @@
 
     // Example usage
     loadContactForm('Understanding Neural Processing Units (NPU): The Future of AI Accelerators');
+
+    function loadShareSection(title, url) {
+      fetch('../misc/shareblog.html')
+        .then(response => response.text())
+        .then(html => {
+          // Replace the placeholders with actual values
+          let replacedHtml = html
+            .replace(/{{title}}/g, title)
+            .replace(/{{url}}/g, url);
+
+          // Insert the HTML into the desired element
+          document.getElementById('shareSectionPlaceholder').innerHTML = replacedHtml;
+        });
+    }
+
+    // Load the share section with custom title and URL
+    loadShareSection('Understanding Neural Processing Units (NPU): The Future of AI Accelerators', 'blog/Understanding_Neural_Processing_Units_(NPU).html');
   </script>
 
   <script src="../scripts/blog-share.js"></script>

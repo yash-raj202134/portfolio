@@ -1,0 +1,25 @@
+<div class="social-share mt-4">
+    <h5 class="mb-3">Share this post?</h5>
+    <div class="d-flex flex-wrap gap-2">
+      <button class="btn btn-success social-btn"
+        onclick="shareOnWhatsApp('{{title}}', '{{url}}')"
+        title="Share on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </button>
+      <button class="btn btn-primary social-btn"
+        onclick="shareOnFacebook('{{title}}', '{{url}}')"
+        title="Share on Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </button>
+      <button class="btn btn-info social-btn"
+        onclick="shareOnTwitter('{{title}}', '{{url}}')"
+        title="Share on Twitter">
+        <i class="fab fa-twitter"></i>
+      </button>
+      <button class="btn btn-primary social-btn"
+        onclick="shareOnLinkedIn('{{title}}', '{{url}}')"
+        title="Share on LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </button>
+    </div>
+</div>

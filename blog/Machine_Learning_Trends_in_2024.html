@@ -1,3 +1,4 @@
+<!-- post id 1 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -129,33 +130,8 @@
           <p class="text-muted text-end"><img src="../Images/ico3.ico" alt="Custom Icon"
               style="width: 24px; height: 24px; margin-right: 10px;"> Author - Yash Raj </p>
 
-          <!-- Share Section -->
-          <div class="social-share mt-4">
-            <h5 class="mb-3">Share this post ?</h5>
-            <div class="d-flex flex-wrap gap-2">
-              <button class="btn btn-success social-btn"
-                onclick="shareOnWhatsApp('Machine Learning Trends in 2024', 'blog/post1-Machine_Learning_Trends_in_2024.html')"
-                title="Share on WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-              </button>
-              <button class="btn btn-primary social-btn"
-                onclick="shareOnFacebook('Machine Learning Trends in 2024', 'blog/post1-Machine_Learning_Trends_in_2024.html')"
-                title="Share on Facebook">
-                <i class="fab fa-facebook-f"></i>
-              </button>
-              <button class="btn btn-info social-btn"
-                onclick="shareOnTwitter('Machine Learning Trends in 2024', 'blog/post1-Machine_Learning_Trends_in_2024.html')"
-                title="Share on Twitter">
-                <i class="fab fa-twitter"></i>
-              </button>
-              <button class="btn btn-primary social-btn"
-                onclick="shareOnLinkedIn('Machine Learning Trends in 2024', 'blog/post1-Machine_Learning_Trends_in_2024.html')"
-                title="Share on LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-              </button>
-
-            </div>
-          </div>
+          <!-- Share Section Placeholder -->
+          <div id="shareSectionPlaceholder"></div>
 
           <!-- Contact Form container -->
           <div id="contact-form-container"></div>
@@ -264,6 +240,24 @@
 
     // Example usage
     loadContactForm('Machine Learning Trends in 2024');
+
+
+    function loadShareSection(title, url) {
+      fetch('../misc/shareblog.html')
+        .then(response => response.text())
+        .then(html => {
+          // Replace the placeholders with actual values
+          let replacedHtml = html
+            .replace(/{{title}}/g, title)
+            .replace(/{{url}}/g, url);
+
+          // Insert the HTML into the desired element
+          document.getElementById('shareSectionPlaceholder').innerHTML = replacedHtml;
+        });
+    }
+
+    // Load the share section with custom title and URL
+    loadShareSection('Machine Learning Trends in 2024', 'blog/Machine_Learning_Trends_in_2024.html');
 
   </script>
 
