@@ -674,7 +674,7 @@
     });
     // Function to dynamically load the contact form and inject values
     function loadContactForm(blogPostTitle) {
-      fetch('../misc/contactform.html')  
+      fetch('../misc/contactform.html')
         .then(response => response.text())
         .then(html => {
           document.getElementById('contact-form-container').innerHTML = html;
