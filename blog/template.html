@@ -1,3 +1,4 @@
+<!-- post id 1 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +14,8 @@
   <link rel="stylesheet" href="../styles/blog-styles.css">
   <link rel="stylesheet" href="../styles/blog-post-styles.css">
   <link rel="stylesheet" href="../styles/custom-button.css">
-  
+
+
 </head>
 
 <body>
@@ -30,7 +32,7 @@
           <p class="text-muted">Posted on July 15, 2024</p>
 
           <a>
-            <img src="https://visitcount.itsvg.in/api?id=template1&label=Views&color=12&icon=5&pretty=true" />
+            <img src="https://visitcount.itsvg.in/api?id=temp&label=Views&color=12&icon=5&pretty=true" />
           </a>
 
 
@@ -54,11 +56,24 @@
             <span class="badge bg-secondary me-1">AI Research</span>
             <!-- Add more tags as needed -->
           </div>
+          <h2 class="mb-4"></h2>
 
-          <img src="../images/blog-images/blog1/machinelearning.jpg" alt="Machine Learning Trends" class="img-fluid mb-4">
+          <!-- Table of Contents -->
+          <div class="toc">
+            <h5>Table of Contents</h5>
+            <a href="#abstract">Abstract</a>
+            <a href="#challenges">Challenges in Data and Machine Learning Today</a>
+            <a href="#indispensable">Why ML is Indispensable in 2024 and Beyond?</a>
+            <a href="#references">References</a>
+          </div>
+          <h2 class="mb-4"></h2>
+
+          <img src="../images/blog-images/blog1/machinelearning.jpg" alt="Machine Learning Trends"
+            class="img-fluid mb-4">
 
 
-          <h5>Abstract</h5>
+
+          <h5 id="abstract">Abstract</h5>
 
           <p>Machine learning continues to evolve at a rapid pace. In this post, we'll explore the key trends shaping
             the field in 2024.</p>
@@ -81,7 +96,7 @@
             both
             innovation and societal well-being.
           </p>
-          <h5>Challenges in Data and Machine Learning Today</h5>
+          <h5 id="challenges">Challenges in Data and Machine Learning Today</h5>
           <p>
             The rapid evolution of data and machine learning has introduced a complex set of challenges.
             Data quality, privacy, scarcity, and heterogeneity pose significant obstacles.
@@ -92,7 +107,7 @@
             for the successful and responsible development of AI applications.
           </p>
 
-          <h5>Why ML is Indispensable in 2024 and Beyond ?</h5>
+          <h5 id="indispensable">Why ML is Indispensable in 2024 and Beyond ?</h5>
           <p>
             Machine learning (ML) has transcended its niche origins to become a driving force for innovation across
             industries.
@@ -115,112 +130,13 @@
           <p class="text-muted text-end"><img src="../Images/ico3.ico" alt="Custom Icon"
               style="width: 24px; height: 24px; margin-right: 10px;"> Author - Yash Raj </p>
 
-          <!-- Share Section -->
-          <div class="social-share mt-4">
-            <h5 class="mb-3">Share this post ?</h5>
-            <div class="d-flex flex-wrap gap-2">
-              <button class="btn btn-success social-btn"
-                onclick="shareOnWhatsApp('Machine Learning Trends in 2024', 'blog/post1-Machine_Learning_Trends_in_2024.html')"
-                title="Share on WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-              </button>
-              <button class="btn btn-primary social-btn"
-                onclick="shareOnFacebook('Machine Learning Trends in 2024', 'blog/post1-Machine_Learning_Trends_in_2024.html')"
-                title="Share on Facebook">
-                <i class="fab fa-facebook-f"></i>
-              </button>
-              <button class="btn btn-info social-btn"
-                onclick="shareOnTwitter('Machine Learning Trends in 2024', 'blog/post1-Machine_Learning_Trends_in_2024.html')"
-                title="Share on Twitter">
-                <i class="fab fa-twitter"></i>
-              </button>
-              <button class="btn btn-primary social-btn"
-                onclick="shareOnLinkedIn('Machine Learning Trends in 2024', 'blog/post1-Machine_Learning_Trends_in_2024.html')"
-                title="Share on LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-              </button>
+          <!-- Share Section Placeholder -->
+          <div id="shareSectionPlaceholder"></div>
 
-            </div>
-          </div>
+          <!-- Contact Form container -->
+          <div id="contact-form-container"></div>
 
-
-
-          <!-- Contact Form Section -->
-          <div class="contact-section mt-5 p-4"
-            style="background-color: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); max-width: 600px; margin: auto;">
-            <h4 class="text-center mb-4" style="color: #343a40;">Have any questions or feedback? </h4>
-            <p class="text-center mb-4" style="color: #6c757d;">Feel free to send me a
-              message!</p>
-
-            <!-- Web3Forms Form -->
-            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-              <!-- Web3Forms Access Key -->
-              <input type="hidden" name="access_key" value="4ccdb722-03b1-494b-99ff-388a411d1fe0">
-
-              <!-- Blog Post Information -->
-              <input type="hidden" name="subject" value="Query about Machine Learning Trends in 2024">
-              <!-- <input type="hidden" name="redirect" value="https://yourwebsite.com/thank-you-page"> -->
-
-              <!-- Name Field -->
-              <div class="form-group mb-4">
-                <label for="name" style="font-weight: bold; color: #495057;">Your Name</label>
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"
-                      style="background-color: #007bff; color: #fff; border-radius: 10px 0 0 10px;"><i
-                        class="fas fa-user"></i></span>
-                  </div>
-                  <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required
-                    style="border-radius: 0 10px 10px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                </div>
-              </div>
-
-              <!-- Email Field -->
-              <div class="form-group mb-4">
-                <label for="email" style="font-weight: bold; color: #495057;">Your Email</label>
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"
-                      style="background-color: #007bff; color: #fff; border-radius: 10px 0 0 10px;"><i
-                        class="fas fa-envelope"></i></span>
-                  </div>
-                  <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email"
-                    required style="border-radius: 0 10px 10px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                </div>
-              </div>
-
-              <!-- Message Field -->
-              <div class="form-group mb-4">
-                <label for="message" style="font-weight: bold; color: #495057;">Message</label>
-                <div class="input-group">
-                  <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your message here..."
-                    required style="border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"></textarea>
-                </div>
-              </div>
-
-              <!-- Submit Button -->
-              <button type="submit" class="btn btn-primary btn-block"
-                style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0,123,255,0.3); transition: 0.3s; font-weight: bold;"
-                onmouseover="this.style.boxShadow='0 6px 12px rgba(0,123,255,0.5)'"
-                onmouseout="this.style.boxShadow='0 4px 10px rgba(0,123,255,0.3)'">
-                <i class="fas fa-paper-plane"></i> Send Message
-              </button>
-            </form>
-
-            <!-- Alternative Email Button -->
-            <div class="mt-4 text-center">
-              <p>Or, email me directly:</p>
-              <button class="btn btn-primary custom-btn" onclick="redirectToGmail('Machine Learning Trends in 2024')"
-                style="border-radius: 10px; box-shadow: 0 4px 10px rgba(108,117,125,0.3); transition: 0.3s;"
-                onmouseover="this.style.boxShadow='0 6px 12px rgba(108,117,125,0.5)'"
-                onmouseout="this.style.boxShadow='0 4px 10px rgba(108,117,125,0.3)'">
-                <i class="fas fa-envelope"></i> Email Me
-              </button>
-            </div>
-          </div>
-
-
-
+          <h2 class="mb-4"></h2>
 
           <a href="../blog-listing.html" class="btn btn-secondary custom-btn mt-4"
             style="border-radius: 10px; padding: 12px 24px; background-color: #6c757d; color: #fff; font-weight: bold; box-shadow: 0 4px 10px rgba(108,117,125,0.3); transition: 0.3s; text-transform: uppercase;"
@@ -231,15 +147,14 @@
 
 
           <!-- References Section -->
-
+          <h2 class="mb-4"></h2>
           <div class="container mt-5" style="font-size: 12px;">
-            <h5><em>References</em></h5>
+            <h5 id="references"><em>References</em></h5>
             <br>
             <div class="row">
               <div class="col-md-6 mb-3">
                 <div class="reference-box">
-                  <h6 class="reference-title" style="font-size: 12px;"><em>[1]</em></h6>
-                  <p class="reference-details"><em>Image source: "towardsdatascience.com" Introduction to Machine
+                  <p class="reference-details"><em>[1] Image source: "towardsdatascience.com" Introduction to Machine
                       Learning
                       for Beginners. - Ayush Pant
                       <br>
@@ -252,8 +167,8 @@
               </div>
               <div class="col-md-6 mb-3">
                 <div class="reference-box">
-                  <h6 class="reference-title" style="font-size: 12px;"><em>[2]</em></h6>
-                  <p class="reference-details"><em>International Association of Business Analytics Certification :
+
+                  <p class="reference-details"><em>[2] International Association of Business Analytics Certification :
                       Issues in Machine Learning -IABAC 2024
                       <br>
                       <a href="https://iabac.org/blog/issues-in-machine-learning" target="_blank">Visit Article</a> <br>
@@ -265,9 +180,9 @@
               </div>
               <div class="col-md-6 mb-3">
                 <div class="reference-box">
-                  <h6 class="reference-title" style="font-size: 12px;"><em>[3]</em></h6>
+
                   <p class="reference-details">
-                    <em>Cigniti: A Coforge Company : AI/ML Trends in 2023 and Beyond -
+                    <em>[3] Cigniti: A Coforge Company : AI/ML Trends in 2023 and Beyond -
                       Srinivas Atreya <br>
                       <a href="https://www.cigniti.com/blog/artificial-intelligence-machine-learning-trends-ai-ml/"
                         target="_blank">Visit Article</a> <br>
@@ -292,9 +207,10 @@
   <!-- Footer placeholder -->
   <div id="footer-placeholder"></div>
 
+  <!-- script -->
   <script>
     // JavaScript to load external navbar
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       fetch("../misc/navbar.html")
         .then(response => response.text())
         .then(data => {
@@ -303,18 +219,49 @@
     });
 
     // JavaScript to load external footer
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       fetch("../misc/footer.html")
         .then(response => response.text())
         .then(data => {
           document.getElementById("footer-placeholder").innerHTML = data;
         });
     });
+
+    // Function to dynamically load the contact form and inject values
+    function loadContactForm(blogPostTitle) {
+      fetch('../misc/contactform.html')
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById('contact-form-container').innerHTML = html;
+          document.getElementById('contactSubject').value = `Query about ${blogPostTitle}`;
+          document.getElementById('emailButton').setAttribute('onclick', `redirectToGmail('${blogPostTitle}')`);
+        });
+    }
+
+    // Example usage
+    loadContactForm('Machine Learning Trends in 2024');
+
+
+    function loadShareSection(title, url) {
+      fetch('../misc/shareblog.html')
+        .then(response => response.text())
+        .then(html => {
+          // Replace the placeholders with actual values
+          let replacedHtml = html
+            .replace(/{{title}}/g, title)
+            .replace(/{{url}}/g, url);
+
+          // Insert the HTML into the desired element
+          document.getElementById('shareSectionPlaceholder').innerHTML = replacedHtml;
+        });
+    }
+
+    // Load the share section with custom title and URL
+    loadShareSection('Machine Learning Trends in 2024', 'blog/Machine_Learning_Trends_in_2024.html');
+
   </script>
 
-
   <!-- jQuery and Bootstrap JS -->
-
   <script src="../scripts/blog-share.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
