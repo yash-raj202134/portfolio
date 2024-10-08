@@ -70,17 +70,28 @@
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
-    margin-right: 200px;
-    margin-left: 0px; 
+    margin-left: 0; 
+    /* Use percentage for fluid width */
+    width: 100%;
+    max-width: 430px; /* Adjust the max width for larger screens */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .toc a {
     display: block;
     padding: 5px;
     color: #007bff;
-    text-decoration: aliceblue;
+    text-decoration: none; /* Update to remove unused styles */
 }
 
 .toc a:hover {
     text-decoration: underline;
+}
+
+/* Media Query for mobile devices */
+@media (max-width: 768px) {
+    .toc {
+        max-width: 100%; /* Full width for smaller screens */
+        margin-right: 0; /* Remove right margin for mobile */
+    }
 }
