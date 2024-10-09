@@ -57,6 +57,7 @@
             <span class="badge bg-secondary me-1">Future of AI</span>
             <!-- Add more tags as needed -->
           </div>
+
           <h2 class="mb-4"></h2>
           <!-- Table of Contents -->
           <div class="toc">
@@ -73,9 +74,6 @@
 
           <img src="../images/blog-images/blog3/MIT-Neural-Networks-01_0.gif" alt="Neural Network and Human Brain"
             class="img-fluid mb-4">
-          <!-- <p style="font-size: 12px;">Image source: "neuronsresearch" Neural Networks and the Brain: A Comparative
-            Analysis. https://news.mit.edu/2022/neural-networks-brain-function-1102 (accessed May 31, 2024).
-          </p> -->
 
           <h5 id="abstract">Abstract</h5>
 
@@ -172,7 +170,6 @@
             <i class="fas fa-arrow-left"></i> Back to Blog
           </a>
 
-
           <!-- References Section -->
           <h2 class="mb-4"></h2>
           <div class="container mt-5" style="font-size: 12px;">
@@ -203,14 +200,10 @@
                     </p>
                   </div>
                 </div>
-
                 <!-- Add more reference boxes as needed -->
               </div>
-
             </em>
-
           </div>
-
           <!-- End of Ref Content -->
         </article>
       </div>
@@ -241,7 +234,7 @@
     });
     // Function to dynamically load the contact form and inject values
     function loadContactForm(blogPostTitle) {
-      fetch('../misc/contactform.html')  
+      fetch('../misc/contactform.html')
         .then(response => response.text())
         .then(html => {
           document.getElementById('contact-form-container').innerHTML = html;
@@ -250,9 +243,10 @@
         });
     }
 
-    // Example usage
+    // Load the contact form with custom title
     loadContactForm('How a Neural Network Mimics the Human Brain and to What Extent');
 
+    // Load the share section with custom title and URL
     function loadShareSection(title, url) {
       fetch('../misc/shareblog.html')
         .then(response => response.text())
@@ -268,7 +262,11 @@
     }
 
     // Load the share section with custom title and URL
-    loadShareSection('How a Neural Network Mimics the Human Brain and to What Extent', 'blog/How_a_Neural_Network_Mimics_the_Human_Brain_and_to_What_Extent.html');
+    loadShareSection(
+      'How a Neural Network Mimics the Human Brain and to What Extent', 
+      'blog/How_a_Neural_Network_Mimics_the_Human_Brain_and_to_What_Extent.html'
+    );
+
   </script>
 
   <script src="../scripts/blog-share.js"></script>

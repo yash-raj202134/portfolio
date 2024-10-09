@@ -14,57 +14,6 @@
   <link rel="stylesheet" href="../styles/blog-styles.css">
   <link rel="stylesheet" href="../styles/blog-post-styles.css">
   <link rel="stylesheet" href="../styles/custom-button.css">
-  <!-- script -->
-  <script>
-    // JavaScript to load external navbar
-    document.addEventListener("DOMContentLoaded", function () {
-      fetch("../misc/navbar.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("navbar-placeholder").innerHTML = data;
-        });
-    });
-
-    // JavaScript to load external footer
-    document.addEventListener("DOMContentLoaded", function () {
-      fetch("../misc/footer.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("footer-placeholder").innerHTML = data;
-        });
-    });
-
-    // Function to dynamically load the contact form and inject values
-    function loadContactForm(blogPostTitle) {
-      fetch('../misc/contactform.html')
-        .then(response => response.text())
-        .then(html => {
-          document.getElementById('contact-form-container').innerHTML = html;
-          document.getElementById('contactSubject').value = `Query about ${blogPostTitle}`;
-          document.getElementById('emailButton').setAttribute('onclick', `redirectToGmail('${blogPostTitle}')`);
-        });
-    }
-
-    // Example usage
-    loadContactForm('The Impact of Data Science on Modern Business');
-
-    function loadShareSection(title, url) {
-      fetch('../misc/shareblog.html')
-        .then(response => response.text())
-        .then(html => {
-          // Replace the placeholders with actual values
-          let replacedHtml = html
-            .replace(/{{title}}/g, title)
-            .replace(/{{url}}/g, url);
-
-          // Insert the HTML into the desired element
-          document.getElementById('shareSectionPlaceholder').innerHTML = replacedHtml;
-        });
-    }
-
-    // Load the share section with custom title and URL
-    loadShareSection('The Impact of Data Science on Modern Business', 'blog/The_Impact_of_Data_Science_on_Modern_Business.html');
-  </script>
 
 </head>
 
@@ -102,6 +51,7 @@
             <span class="badge bg-secondary me-1">Data Quality</span>
             <!-- Add more tags as needed -->
           </div>
+
           <h2 class="mb-4"></h2>
           <!-- Table of Contents -->
           <div class="toc">
@@ -116,8 +66,6 @@
           <h2 class="mb-4"></h2>
 
           <img src="../images/blog-images/blog2/datasci.png" alt="DS in modern business" class="img-fluid mb-4">
-
-
 
           <h5 id="abstract">Abstract</h5>
 
@@ -267,11 +215,9 @@
                   </p>
                 </div>
               </div>
-
               <!-- Add more reference boxes as needed -->
             </div>
           </div>
-
           <!-- End of Ref Content -->
         </article>
       </div>
@@ -282,6 +228,61 @@
   <div id="footer-placeholder"></div>
 
 
+  <!-- script -->
+  <script>
+    // JavaScript to load external navbar
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch("../misc/navbar.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("navbar-placeholder").innerHTML = data;
+        });
+    });
+
+    // JavaScript to load external footer
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch("../misc/footer.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    });
+
+    // Function to dynamically load the contact form and inject values
+    function loadContactForm(blogPostTitle) {
+      fetch('../misc/contactform.html')
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById('contact-form-container').innerHTML = html;
+          document.getElementById('contactSubject').value = `Query about ${blogPostTitle}`;
+          document.getElementById('emailButton').setAttribute('onclick', `redirectToGmail('${blogPostTitle}')`);
+        });
+    }
+
+    // Load the contact form with custom title
+    loadContactForm('The Impact of Data Science on Modern Business');
+
+    function loadShareSection(title, url) {
+      fetch('../misc/shareblog.html')
+        .then(response => response.text())
+        .then(html => {
+          // Replace the placeholders with actual values
+          let replacedHtml = html
+            .replace(/{{title}}/g, title)
+            .replace(/{{url}}/g, url);
+
+          // Insert the HTML into the desired element
+          document.getElementById('shareSectionPlaceholder').innerHTML = replacedHtml;
+        });
+    }
+
+    // Load the share section with custom title and URL
+    loadShareSection(
+      'The Impact of Data Science on Modern Business',
+      'blog/The_Impact_of_Data_Science_on_Modern_Business.html'
+    );
+
+  </script>
 
   <!-- jQuery and Bootstrap JS -->
   <script src="../scripts/blog-share.js"></script>

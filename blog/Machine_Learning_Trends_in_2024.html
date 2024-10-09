@@ -35,7 +35,6 @@
             <img src="https://visitcount.itsvg.in/api?id=post1&label=Views&color=12&icon=5&pretty=true" />
           </a>
 
-
           <div class="blog-tags mb-4">
             <br>
             <span class="badge bg-secondary me-1">Machine Learning</span>
@@ -71,13 +70,10 @@
           <img src="../images/blog-images/blog1/machinelearning.jpg" alt="Machine Learning Trends"
             class="img-fluid mb-4">
 
-
-
           <h5 id="abstract">Abstract</h5>
 
           <p>Machine learning continues to evolve at a rapid pace. In this post, we'll explore the key trends shaping
             the field in 2024.</p>
-
           <p>
             Machine learning, once a specialized field, is rapidly transforming into a cornerstone of modern technology.
             In 2024, the landscape is marked by several pivotal trends. Generative AI and large language models,
@@ -145,7 +141,6 @@
             <i class="fas fa-arrow-left"></i> Back to Blog
           </a>
 
-
           <!-- References Section -->
           <h2 class="mb-4"></h2>
           <div class="container mt-5" style="font-size: 12px;">
@@ -192,13 +187,11 @@
                   </p>
                 </div>
               </div>
-
               <!-- Add more reference boxes as needed -->
             </div>
           </div>
 
           <!-- End of Ref Content -->
-
         </article>
       </div>
     </div>
@@ -238,10 +231,10 @@
         });
     }
 
-    // Example usage
+    // Load the contact form with custom title
     loadContactForm('Machine Learning Trends in 2024');
 
-
+    // Load the share section with custom title and URL
     function loadShareSection(title, url) {
       fetch('../misc/shareblog.html')
         .then(response => response.text())
@@ -250,14 +243,16 @@
           let replacedHtml = html
             .replace(/{{title}}/g, title)
             .replace(/{{url}}/g, url);
-
           // Insert the HTML into the desired element
           document.getElementById('shareSectionPlaceholder').innerHTML = replacedHtml;
         });
     }
 
     // Load the share section with custom title and URL
-    loadShareSection('Machine Learning Trends in 2024', 'blog/Machine_Learning_Trends_in_2024.html');
+    loadShareSection(
+      'Machine Learning Trends in 2024',
+      'blog/Machine_Learning_Trends_in_2024.html'
+    );
 
   </script>
 
