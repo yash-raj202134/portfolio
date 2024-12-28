@@ -52,7 +52,7 @@ portfolio-website/
 |
 ├── files/
 │    ├── resume.pdf
-│    ├── other files...
+│    ├── other files..
 |
 ├── blog/
 │   ├── post1.html
