@@ -55,11 +55,13 @@
           <div class="toc">
             <h5>Table of Contents</h5>
             <a href="#abstract"> Abstract</a>
-            <a href="#therise"></a>
-            <a href="#architectureandtechdeepdive"></a>
-            <a href="#impact"></a>
-            <a href="#futureprospects"></a>
-            <a href="#conclusion"></a>
+            <a href="#understanding">Understanding Agentic AI</a>
+            <a href="#corecapabilities">Core Capabilities of Agentic AI</a>
+            <a href="#agenticvsgenerative">Agentic AI vs. Generative AI: A Comparative Analysis</a>
+            <a href="#transformingindustries">Transforming Industries: Real-World Application</a>
+            <a href="#futureofdecisionmaking">Agentic AI & the Future of Decision-Making</a>
+            <a href="#evolutionofwork">Agentic AI & Workforce Evolution</a>
+            <a href="#conclusion">Conclusion & Future Outlook</a>
           </div>
 
           <div>
@@ -76,10 +78,10 @@
           <p>
           </p>
 
-          <img src="../Images/blog-images/blog9/deepseek3.webp" alt="TITLE_IMAGE" class="img-fluid mb-4">
+          <img src="../Images/blog-images/blog10/titleimage.png" alt="TITLE_IMAGE" class="img-fluid mb-4">
 
 
-          <h5 id="therise">The Rise of DeepSeek AI: Why It Matters</h5>
+          <h5 id="understanding">Understanding Agentic AI</h5>
           <p>DeepSeek-R1 the latest AI model from Chinese startup DeepSeek represents a groundbreaking advancement in
             generative AI technology. It has gained global attention for its innovative
             architecture, cost-effectiveness, and exceptional performance across multiple domains.</p>
@@ -108,7 +110,7 @@
           </ul>
 
 
-          <h5 id="architectureandtechdeepdive">Architecture and Technical Deep Dive</h5>
+          <h5 id="corecapabilities">Core Capabilities of Agentic AI</h5>
           <p>
             DeepSeek-R1 is a powerful AI model for text generation, distinguished by its scalability, efficiency, and
             high performance. Built on a hybrid architecture that combines an advanced transformer-based structure with
@@ -118,234 +120,9 @@
             with exceptional accuracy, speed, and cost-effectiveness.
           </p>
 
-          <strong>Mixture of Experts (MoE) Architecture</strong>
-          <img src="../Images/blog-images/blog9/architecture.png" alt="MOE architecture" class="img-fluid mb-4">
-          <p>
-            DeepSeek-R1 employs a Mixture of Experts (MoE) architecture, where multiple specialized networks handle
-            different parts of an input, with only a selected subset activated for each query.
-          </p>
+          
 
-          <ul>
-            <li><strong>Total Parameters:</strong> 671B, with only 37B utilized per inference step.</li>
-            <li><strong>Expert Networks:</strong> Specialized models trained across various knowledge domains.</li>
-            <li><strong>Routing Mechanism:</strong> A gating network determines which experts to activate, enhancing
-              efficiency.</li>
-          </ul>
-
-
-          <strong>Expert Selection and Routing Algorithm</strong>
-          <p>
-            During inference, DeepSeek-R1 employs a learned routing mechanism to efficiently select relevant experts
-            based on the input context.
-          </p>
-          <ul>
-            <li><strong>Step 1: Gating Network</strong> – The input is processed by a lightweight gating network, which
-              assigns a probability distribution across all experts.</li>
-            <li><strong>Step 2: Expert Selection</strong> – The model selects a top-ranked subset of experts (typically
-              2-4 per query).</li>
-            <li><strong>Step 3: Parallel Processing</strong> – The chosen experts handle the query simultaneously,
-              generating intermediate representations.</li>
-            <li><strong>Step 4: Output Aggregation</strong> – The model combines expert outputs using a weighted sum
-              mechanism to generate the final response.</li>
-          </ul>
-
-          <strong>Parallelization Strategy</strong>
-          <p>
-            To enhance performance and scalability, DeepSeek-R1 utilizes distributed training techniques. It implements
-            Model parallelism by splitting large layers across multiple GPUs, enabling efficient handling of
-            extensive computations. Data parallelism ensures that training data is distributed across GPUs, allowing
-            synchronized updates to model parameters for consistency. Additionally, Pipeline parallelism processes
-            different model components simultaneously, significantly reducing latency and improving overall training
-            efficiency.
-          </p>
-
-          <strong>Training Process: Reinforcement Learning at Scale</strong>
-          <p>
-            DeepSeek-R1’s training methodology departs from traditional supervised learning and instead focuses on
-            reinforcement learning (RL) for reasoning. This strategy allows the model to improve its logical consistency
-            and adaptability without requiring large-scale human annotations.
-          </p>
-
-          <strong>Data Preparation</strong>
-          <p>The model's training dataset comprises:</p>
-          <ul>
-            <li><i>Filtered Web Data:</i> High-quality, pre-cleaned textual content.</li>
-            <li><i>Domain-Specific Knowledge:</i> Datasets focused on mathematics, science, and reasoning.</li>
-            <li><i>Self-Generated Feedback Data:</i> AI-generated responses that are assessed and refined for continuous
-              improvement.</li>
-          </ul>
-
-
-          <strong> Pre-training Strategy</strong>
-          <img src="../Images/blog-images/blog9/pretrainingstrategy.png" alt="Pre Training Strategy"
-            class="img-fluid mb-4">
-          <p>Initial training follows a two-phase approach:</p>
-          <ul>
-            <li><strong>Cold Start Phase (2 weeks):</strong>Basic language comprehension training and Minimal supervised
-              fine-tuning (~1% of standard approaches).</li>
-            <li><strong>Reinforcement Learning Phase (8 weeks):</strong> Self-improvement through trial and error,
-              Adaptation of reasoning strategies.</li>
-          </ul>
-
-
-          <strong>Reinforcement Learning Implementation</strong>
-          <img src="../Images/blog-images/blog9/Reinforcementlearning.png" alt="Reinforcement Learning Implementation"
-            class="img-fluid mb-4">
-          <p>DeepSeek-R1 utilizes reward modeling and reinforcement learning to fine-tune its reasoning abilities.</p>
-          <ul>
-            <li><strong>Step 1:</strong> Generate multiple outputs for a given query.</li>
-            <li><strong>Step 2:</strong> Evaluate outputs based on logical consistency and correctness.</li>
-            <li><strong>Step 3:</strong> Assign reward values to different response structures.</li>
-            <li><strong>Step 4:</strong> Train the model using reinforcement learning to favor high-reward outputs.</li>
-
-          </ul>
-
-          <strong>Reward Calculation Algorithm</strong>
-          <pre><code>
-            def calculate_reward(response):
-                rewards = {
-                    'logical_consistency': score_logic(response),
-                    'solution_accuracy': verify_solution(response),
-                    'reasoning_clarity': evaluate_clarity(response),
-                    'efficiency': measure_step_efficiency(response)
-                }
-                
-                final_reward = (
-                    0.4 * rewards['logical_consistency'] +
-                    0.3 * rewards['solution_accuracy'] +
-                    0.2 * rewards['reasoning_clarity'] +
-                    0.1 * rewards['efficiency']
-                )
-                
-                return final_reward
-                </code></pre>
-          <p>
-            The algorithm calculates a reward score for a given response based on four criteria: logical consistency,
-            solution accuracy, reasoning clarity, and efficiency. Each criterion is evaluated using separate functions,
-            and their scores are weighted (40%, 30%, 20%, and 10% respectively) to compute the final reward. This
-            ensures a balanced assessment, prioritizing logical consistency and accuracy while still considering clarity
-            and efficiency.
-          </p>
-
-          <strong>Optimization Techniques</strong>
-          <p>To improve training efficiency, DeepSeek-R1 incorporates:</p>
-          <ul>
-            <li><strong>Gradient Checkpointing:</strong> Reduces memory consumption by recomputing intermediate values.
-            </li>
-            <li><strong>Mixed Precision Training:</strong> Uses FP16 precision to optimize GPU memory usage.</li>
-            <li><strong>Layer-wise Adaptive Learning Rates:</strong> Fine-tunes different layers at varying rates to
-              enhance convergence speed.</li>
-          </ul>
-
-          <strong>Results and Validation</strong>
-          <p>DeepSeek-R1 achieved state-of-the-art results in various NLP tasks, including text classification, question
-            answering, and natural language inference. It outperformed existing models in terms of accuracy, efficiency,
-            and scalability, demonstrating its potential to revolutionize AI research and applications.
-          </p>
-
-          <strong>Training Metrices</strong>
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>Training Phase</th>
-                <th>Duration</th>
-                <th>Compute Usage</th>
-                <th>Quality Threshold</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><i>Cold Start</i></td>
-                <td>2 weeks</td>
-                <td>15%</td>
-                <td>0.75</td>
-              </tr>
-              <tr>
-                <td><i>RL Training</i></td>
-                <td>8 weeks</td>
-                <td>70%</td>
-                <td>0.85</td>
-              </tr>
-              <tr>
-                <td><i>Rejection Sampling</i></td>
-                <td>4 weeks</td>
-                <td>15%</td>
-                <td>0.90</td>
-              </tr>
-            </tbody>
-          </table>
-
-
-          <strong>Benchmark Performance</strong>
-          <p>DeepSeek-R1 is evaluated against industry-leading AI models.</p>
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>Benchmark</th>
-                <th>DeepSeek-R1 Score</th>
-                <th>GPT-4 Score</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><i>MATH-500</i></td>
-                <td> 97.3%</td>
-                <td>98.2%</td>
-              </tr>
-              <tr>
-                <td><i>ARC Reasoning</i></td>
-                <td>88.5%</td>
-                <td>90.1%</td>
-              </tr>
-              <tr>
-                <td><i>GSM8K (Math)</i></td>
-                <td>82.7%</td>
-                <td>85.5%</td>
-              </tr>
-            </tbody>
-          </table>
-          </p>
-
-
-          <strong>Cost Efficiency Analysis</strong>
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>Factor</th>
-                <th>DeepSeek-R1</th>
-                <th>GPT-4</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><i>Training Cost</i></td>
-                <td>~$5.58M</td>
-                <td>~$100M+</td>
-              </tr>
-              <tr>
-                <td><i>Active Parameters</i></td>
-                <td>37B</td>
-                <td>1.8T</td>
-              </tr>
-              <tr>
-                <td><i>Hardware Requirement</i></td>
-                <td>Consumer GPUs</td>
-                <td>High-end clusters</td>
-              </tr>
-            </tbody>
-          </table>
-
-
-          <strong>Key Takeaways</strong>
-          <ul>
-            <li>DeepSeek-R1’s MoE architecture enables efficient reasoning and domain adaptation.</li>
-            <li>Reinforcement learning-based training enhances logical consistency and adaptability.</li>
-            <li>Cost-effective training and scalability make DeepSeek-R1 a competitive AI model.</li>
-            <li>Competitive performance against GPT-4 in multiple benchmarks.</li>
-          </ul>
-
-
-          <h5 id="impact">Impact on AI Research and Industry</h5>
+          <h5 id="agenticvsgenerative">Agentic AI vs. Generative AI: A Comparative Analysis</h5>
           <p>DeepSeek-R1’s emergence has significant implications for the AI research community and industry at large.
             Here are some key areas where its impact is already being felt:</p>
           <ul>
@@ -362,7 +139,7 @@
             in the realm of open AI competition.
           </p>
 
-          <h5 id="futureprospects">Future Prospects: Can DeepSeek AI Outperform GPT-4 and Beyond?</h5>
+          <h5 id="transformingindustries">Transforming Industries: Real-World Application</h5>
           <p>DeepSeek AI has the potential to rival and even surpass GPT-4 by focusing on efficiency, affordability, and
             multimodal capabilities. Its ability to deliver high performance at lower computational costs makes it an
             attractive alternative for businesses and researchers.</p>
@@ -376,7 +153,9 @@
 
 
 
-          <h5 id="conclusion">Conclusion: The Dawn of Open AI Competition</h5>
+          <h5 id="futureofdecisionmaking">Agentic AI & the Future of Decision-Making</h5>
+          <h5 id="evolutionofwork">Agentic AI & Workforce Evolution</h5>
+          <h5 id="conclusion">Conclusion & Future Outlook</h5>
           <p>The dawn of open AI competition has been a fascinating journey, where researchers, engineers, and industry
             professionals
             have pushed the boundaries of what is possible in artificial intelligence. DeepSeek AI’s emergence as a
@@ -394,17 +173,7 @@
             engaging. If you have any further questions or need assistance, please don't hesitate to reach out to me.
             I'm here to help.</p>
 
-          <h5>Community Resources</h5>
-          <p>DeepSeek-AI offers various resources for developers:</p>
-          <ul>
-            <li><a href="https://huggingface.co/deepseek-ai/DeepSeek-R1">Hugging Face Model Page</a></li>
-            <li><a href="https://github.com/DeepSeekAI/DeepSeek-AI">Deepseek-AI GitHub Repository</a></li>
-            <li><a href="https://discord.gg/j8y3Z5n">Discord Community</a></li>
-            <li><a href="https://www.deepseek.com/">Official Documentation</a></li>
-          </ul>
-
-
-
+      
 
           <p class="text-muted text-end"><img src="../Images/ico3.ico" alt="Custom Icon"
               style="width: 24px; height: 24px; margin-right: 10px;"> Author - Yash Raj </p>
