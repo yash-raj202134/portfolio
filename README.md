@@ -26,7 +26,6 @@ portfolio-website/
 ├── cv.html
 ├── blog-listing.html
 ├── projects.html
-├── test.html
 ├── styles/
 │   ├── styles.css
 │   ├── test_styles.css
